@@ -11,7 +11,7 @@ function App() {
             <Navbar />
 
           
-            <div className="pt-14 pb-14">
+            <div className="pt-20 pb-20 ">
               <Routes>
                 <Route path="/React" element={<React />} />
                 
