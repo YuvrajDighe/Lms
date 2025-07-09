@@ -1,5 +1,6 @@
   import { BrowserRouter as Router , Route, Routes } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
+import React from "./component/React";
 function App() {
 
   return (
@@ -10,13 +11,12 @@ function App() {
             <Navbar />
 
           
-            {/* <div className="pt-14 pb-14">
+            <div className="pt-14 pb-14">
               <Routes>
-                <Route path="/Home" element={<Home />} />
-                <Route path="/AboutUs" element={<AboutUs />} />
-                <Route path="/Services" element={<Services />} />
+                <Route path="/React" element={<React />} />
+                
               </Routes>
-            </div> */}
+            </div>
 
           
           </Router>

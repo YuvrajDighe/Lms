@@ -46,18 +46,10 @@ function Navbar() {
 
         {/* Links */}
         <div className="flex space-x-8">
-          <NavLink to="/Home" className="hover:text-gray-600 font-medium">
-            Home
+          <NavLink to="/React" className="hover:text-gray-600 font-medium">
+            React
           </NavLink>
-          <NavLink to="/AboutUs" className="hover:text-gray-600 font-medium">
-            About
-          </NavLink>
-          <NavLink to="/Services" className="hover:text-gray-600 font-medium">
-            Services
-          </NavLink>
-          <NavLink to="/contact" className="hover:text-gray-600 font-medium">
-            Contact
-          </NavLink>
+        
         </div>
       </div>
     </nav>
