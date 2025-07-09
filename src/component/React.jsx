@@ -1,7 +1,7 @@
 export function React() {
   return (
     <>
-    <h1>hello</h1>
+    <h1 className="">hello</h1>
     </>
   );
 }
