@@ -1,7 +1,11 @@
  function ReactIntro() {
   return (
     <>
-    <h>react intro</h>
+    <div className="bg-gray-100 p-8  ">
+
+ <h>react intro</h>
+    </div>
+   
     
     </>
    
