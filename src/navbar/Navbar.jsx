@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import logo from '../assets/L.png';
 
 function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -36,11 +37,12 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
-            src="src/assets/L.png"
-            alt="Logo"
-            className="max-h-14 object-contain "
-          />
+       <img
+  src={logo}
+  alt="Logo"
+  className="max-h-14 object-contain"
+/>
+
           <span className="text-xl font-bold text-gray-800">My Logo</span>
         </div>
 
