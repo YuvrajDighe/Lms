@@ -1,59 +1,55 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import logo from '../assets/L.png';
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "../assets/L.png";
 
 function Navbar() {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrollThreshold, setScrollThreshold] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (Math.abs(currentScrollY - lastScrollY) < 10) return; // ignore small movements
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // scrolling down & passed 100px
-        setShowNavbar(false);
-      } else if (currentScrollY < lastScrollY) {
-        // scrolling up
-        setShowNavbar(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-transform duration-500 ${
-        showNavbar ? "translate-y-0" : "-translate-y-24"
-      } bg-gray-200 shadow-md`}
-    >
-      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-       <img
-  src={logo}
-  alt="Logo"
-  className="max-h-14 object-contain"
-/>
-
-          <span className="text-xl font-bold text-gray-800">My Logo</span>
+    <nav className="fixed top-0 w-full z-50 bg-[#3A3A4B] shadow-md text-white">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+        {/* Logo Section */}
+        <div className="flex items-center space-x-3 min-w-0 flex-shrink-0">
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-10 w-auto object-contain"
+          />
+          <span className="text-xl font-bold text-white whitespace-nowrap">
+            My Logo
+          </span>
         </div>
 
-        {/* Links */}
-        <div className="flex space-x-8">
-          <NavLink to="/React" className="hover:text-gray-600 font-medium">
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-8">
+          <NavLink to="/React" className="hover:text-gray-300 font-medium">
             React
           </NavLink>
-        
+        </div>
+
+        {/* Hamburger Icon (Mobile) */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-[#3A3A4B] px-4 pb-4">
+          <NavLink
+            to="/React"
+            className="block py-2 text-white hover:text-gray-300 font-medium"
+            onClick={() => setMenuOpen(false)}
+          >
+            React
+          </NavLink>
+        </div>
+      )}
     </nav>
   );
 }

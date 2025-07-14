@@ -5,7 +5,7 @@ function ReactLayout() {
   return (
     <div className="flex pt-20 -mt-2 ">
       <Sidebar />
-      <main className="ml-52 flex-1  ">
+      <main className="ml-60 flex-1  ">
         <Outlet />
       </main>
     </div>

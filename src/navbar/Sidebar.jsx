@@ -1,32 +1,67 @@
 import { NavLink } from "react-router-dom";
+
 function Sidebar() {
+  const linkClass =
+    "block w-full  py-2 rounded hover:bg-gray-600 transition-colors duration-200";
+
   return (
    <aside
-  className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-52 bg-gray-200 shadow-md z-40 overflow-y-auto hidden md:block"
+  className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-60 shadow-md z-40 overflow-y-auto text-white font-bold text-[15px] leading-[20px] tracking-[0.36px]"
+  style={{ backgroundColor: "#3A3A4B", fontFamily: "'Afacad Flux', sans-serif" }}
 >
-      <div className="p-6 space-y-4">
-          <NavLink to="/React/ReactIntro" className="block hover:text-blue-500">Introduction</NavLink>
-              <NavLink to="/React/EnvironmentSetup" className="block hover:text-blue-500">Environment Setup</NavLink>
-               <NavLink to="/React/Jsx" className="block hover:text-blue-500">jsx(JavaScript XML)</NavLink>
-                <NavLink to="/React/ReactComponent" className="block hover:text-blue-500">React component</NavLink>
-                 <NavLink to="/React/StateManegment" className="block hover:text-blue-500">state manegment</NavLink>
-                  <NavLink to="/React/ReactClass" className="block hover:text-blue-500">React Lifecycle(class)</NavLink>
-                   <NavLink to="/React/Hooks" className="block hover:text-blue-500">Hooks</NavLink>
-                    <NavLink to="/React/EventHandling" className="block hover:text-blue-500">Event Handling</NavLink>
-                    <NavLink to="/React/ConditionalRendering" className="block hover:text-blue-500">Conditional Rendering</NavLink>
-                    <NavLink to="/React/ListsKeys" className="block hover:text-blue-500">Lists and Keys</NavLink>
-                    <NavLink to="/React/Froms" className="block hover:text-blue-500">Forms</NavLink>
-                    
-        <NavLink to="/React/PropsIntro" className="block hover:text-blue-500">Data Binding(props)</NavLink>
-      <NavLink to="/React/ReactRouter" className="block hover:text-blue-500">React Router</NavLink>
-      
-          <NavLink to="/React/Styling" className="block hover:text-blue-500">Styling in react</NavLink>
-            <NavLink to="/React/Redux" className="block hover:text-blue-500">Redux & State Mangement</NavLink>
-              <NavLink to="/React/BundlersBuild" className="block hover:text-blue-500">Bundlers & Build Tools</NavLink>
-                <NavLink to="/React/Miscellaneous" className="block hover:text-blue-500">Miscellaneous & Best Practices</NavLink>
-        {/* <NavLink to="/React/ReactEs6" className="block hover:text-blue-500">React Es6</NavLink> */}
-              
-                 
+      <div className="p-6 space-y-2">
+        <NavLink to="/React/ReactIntro" className={linkClass}>
+          Introduction
+        </NavLink>
+        <NavLink to="/React/EnvironmentSetup" className={linkClass}>
+          Environment Setup
+        </NavLink>
+        <NavLink to="/React/Jsx" className={linkClass}>
+          JSX (JavaScript XML)
+        </NavLink>
+        <NavLink to="/React/ReactComponent" className={linkClass}>
+          React Component
+        </NavLink>
+        <NavLink to="/React/StateManegment" className={linkClass}>
+          State Management
+        </NavLink>
+        <NavLink to="/React/ReactClass" className={linkClass}>
+          React Lifecycle (Class)
+        </NavLink>
+        <NavLink to="/React/Hooks" className={linkClass}>
+          Hooks
+        </NavLink>
+        <NavLink to="/React/EventHandling" className={linkClass}>
+          Event Handling
+        </NavLink>
+        <NavLink to="/React/ConditionalRendering" className={linkClass}>
+          Conditional Rendering
+        </NavLink>
+        <NavLink to="/React/ListsKeys" className={linkClass}>
+          Lists and Keys
+        </NavLink>
+        <NavLink to="/React/Froms" className={linkClass}>
+          Forms
+        </NavLink>
+        <NavLink to="/React/PropsIntro" className={linkClass}>
+          Data Binding (Props)
+        </NavLink>
+        <NavLink to="/React/ReactRouter" className={linkClass}>
+          React Router
+        </NavLink>
+        <NavLink to="/React/Styling" className={linkClass}>
+          Styling in React
+        </NavLink>
+        <NavLink to="/React/Redux" className={linkClass}>
+          Redux & State Management
+        </NavLink>
+        <NavLink to="/React/BundlersBuild" className={linkClass}>
+          Bundlers & Build Tools
+        </NavLink>
+        <NavLink to="/React/Miscellaneous" className={linkClass}>
+          Miscellaneous & Best Practices
+        </NavLink>
+        {/* <NavLink to="/React/ReactEs6" className={linkClass}>React ES6</NavLink> */}
       </div>
     </aside>
   );
