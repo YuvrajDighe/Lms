@@ -3,12 +3,12 @@ import Sidebar from "../navbar/Sidebar";
 
 function ReactLayout() {
   return (
-    <div className="flex pt-20 -mt-2 ">
-      <Sidebar />
-      <main className="ml-60 flex-1  ">
-        <Outlet />
-      </main>
-    </div>
+   <div className="flex pt-[72px] -mt-2 ">
+  <Sidebar />
+  <main className="ml-60 flex-1">
+    <Outlet />
+  </main>
+</div>
   );
 }
 
