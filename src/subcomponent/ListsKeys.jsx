@@ -68,11 +68,12 @@ function Garage() {
 
       {/* Lists Explanation */}
       <h2 className="text-2xl font-bold mb-4">What is React Lists</h2>
-      <p className="mb-2">
-        In React, a list is a collection of data that you display in the UI by
-        looping over it — usually using the JavaScript{" "}
-        <code className="text-pink-500">.map()</code> function.
-      </p>
+     <p className="mb-2">
+  Lists are used to display in an ordered form and mainly used to display menus on website.
+  The <code>map()</code> function is used to traverse the list.
+  Include the new list <code>{`<ul><li>`}</code> elements and render it to DOM.
+</p>
+
 
       {/* List Code Box */}
       <div className="bg-black rounded-md p-4 mb-6 shadow relative">
@@ -92,9 +93,8 @@ function Garage() {
       {/* Keys Explanation */}
       <h2 className="text-2xl font-bold mb-4">What is React Keys</h2>
       <p className="mb-2">
-        Keys allow React to keep track of elements. This way, if an item is
-        updated or removed, only that item will be re-rendered instead of the
-        entire list.
+      A key is unique identifier. In React, it is used to identify which items have changed, updated or deleted from the lists. It is useful when we dynamically create component or when the user edit the Lists.
+It also helps to determine which component in a collection need to be rendered instead of re-rendering the entire set of components every time.
       </p>
       <p className="mb-2">
         Keys need to be unique to each sibling. But they can be duplicated
