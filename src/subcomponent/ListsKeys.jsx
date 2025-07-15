@@ -43,7 +43,7 @@ function Garage() {
 }`;
 
   return (
-    <div className="min-h-screen p-6 bg-[#464859] text-white font-sans">
+    <div className="min-h-screen p-10 bg-[#464859] text-white font-sans">
       {/* Page Title */}
       <h1 className="text-4xl font-bold mb-4">Lists and Keys</h1>
 
@@ -76,7 +76,7 @@ function Garage() {
 
       {/* List Code Box */}
       <div className="bg-black rounded-md p-4 mb-6 shadow relative">
-        <h2 className="text-lg font-semibold mb-2 text-white">Example:</h2>
+        <h2 className="text-2xl font-semibold mb-2 text-white">Example:</h2>
         <p className="mb-2 text-sm text-white">Let's render a fruit list:</p>
         <button
           onClick={() => copyToClipboard(listCode)}
@@ -84,7 +84,7 @@ function Garage() {
         >
           Copy
         </button>
-        <pre className="text-sm overflow-auto whitespace-pre-wrap bg-black text-white p-4 rounded">
+        <pre className="text-sm text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
           {listCode}
         </pre>
       </div>
@@ -103,7 +103,7 @@ function Garage() {
 
       {/* Keys Code Box */}
       <div className="bg-black rounded-md p-4 mb-6 shadow relative">
-        <h2 className="text-lg font-semibold mb-2 text-white">Example:</h2>
+        <h2 className="text-2xl font-semibold mb-2 text-white">Example:</h2>
         <p className="mb-2 text-sm text-white">
           Let's use keys with a car list:
         </p>
