@@ -30,9 +30,24 @@ export default function Hooks() {
       </div>
 
       <div className="mb-6">
-        <h2 className="text-2xl font-semibold mb-2">What is a Hook?</h2>
+        <h2 className="text-2xl font-semibold mb-2">What is a Hooks ?</h2>
         <p>
-          A Hook is a special function that lets you “hook into” React features. For example, <code>useState</code> is a Hook that lets you add React state to function components.
+          A Hook is a special function in React that lets you "hook into" React features like state, lifecycle, and context from functional components. Hooks were introduced in React version 16.8 to make functional components more powerful, so they can do everything that class components can do — but with simpler and cleaner code.
+
+Before hooks, only class components could manage state or use lifecycle methods (like componentDidMount). But now, with hooks like useState, useEffect, useContext, etc., you can manage state, run side effects, access context, and more — directly inside a functional component. <code>useState</code> is a Hook that lets you add React state to function components.
+        </p>
+      </div>
+
+       <div className="mb-6">
+        <h2 className="text-2xl font-semibold mb-2">Why Use Hooks ?</h2>
+        <p>
+          Hooks let you use state and lifecycle features in functional components,
+           which were earlier only available in class components. They make code cleaner,
+            shorter, and more reusable. With hooks, you can manage logic easily without using 
+            complex class syntax.
+
+
+
         </p>
       </div>
 
