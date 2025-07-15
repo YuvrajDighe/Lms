@@ -50,8 +50,9 @@ export function ReactProp() {
         <p className="mt-4 text-lg">
           Props are arguments passed into React components.Props are passed to components via HTML attributes.
         </p>
-        <div className='bg-yellow-100 mt-5 p-6 h-20 text-xl'>
-          <h1 className='text-stone-600'><span className='text-red-400 bg-blue-100'>Props  </span> stands for properties.</h1>
+        <div className='bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800
+  mt-5 p-6 h-20 text-xl'>
+          <h1 className='text-stone-600'><span className='text-red-400'>Props  </span> stands for properties.</h1>
         </div>
         <h1 className='text-3xl mt-5'>React Props</h1>
          <p className="mt-4 text-lg">
@@ -72,6 +73,8 @@ export function ReactProp() {
         <p className="mb-4 text-lg">Add a "brand" attribute to the <span className='text-red-400'>"App"</span>  element:</p>
      <pre className=" text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
 {`
+// Parent Component
+
 import React from 'react';
 import Car from './Car';
 function App() {
@@ -95,6 +98,8 @@ export default App;
         <p className="mb-4 text-lg">Create a variable named<span className='text-red-400 '> carName </span>  and send it to the<span className='text-red-400 '> "Car" </span> component:</p>
      <pre className=" text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
 {`
+//Child Component
+
 import React from 'react'
 function Car(props) {
   return (
@@ -123,6 +128,8 @@ State is data managed within a component, that can change over time and cause th
         <p className="mb-4 text-lg"><span className='text-red-400 '> State </span> and <span className='text-red-400 '> Props </span>Example</p>
      <pre className=" text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
 {`
+// Parent Component and Child Component
+
 import React, { useState } from 'react';
 
 function Car(props) {
