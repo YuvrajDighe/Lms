@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ConditionalRendering() {
   return (
@@ -7,13 +8,13 @@ function ConditionalRendering() {
 <h1 className="text-4xl font-bold text-white"> ConditionalRendering</h1>
 
 <div className="flex justify-between mt-6">
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+        <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
           <span className="mr-2">❮</span> Previous
-        </button>
+        </Link>
  
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+        <Link to="/React/ListsKeys" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
           Next <span className="ml-2">❯</span>
-        </button>
+        </Link>
       </div>
 
        <div className="  mt-8 rounded shadow-md ">
@@ -26,7 +27,7 @@ function ConditionalRendering() {
       </p>
 
     
-      <h2 className="text-2xl font-bold mb-4">Use:</h2>
+      <h2 className="text-2xl font-bold mb-4"> ConditionalRendering Use:</h2>
       <>
 <p className="mb-4">
         
@@ -59,10 +60,15 @@ function ConditionalRendering() {
           Classic {" "}
           <code className="text-red-500">if...else</code> in JavaScript
         </p>
+    <p className="mb-4">
+         . Think of:   {" "}
+          <code className="text-red-500"> A light switch </code> – ON or OFF
+        </p> 
+
 
 <p className="mb-4">You check if a condition is true, and return different things</p>
 
- <h2 className="text-2xl font-bold mb-4">Use:</h2>
+ <h2 className="text-2xl font-bold mb-4"> if / else Condition Use:</h2>
 
  <p className="mb-4">
         
@@ -100,7 +106,7 @@ function ConditionalRendering() {
           A short way to write{" "}
           <code className="text-red-500">if...else</code> in one line.
         </p>
-        <h2 className="text-2xl font-bold mb-4">Use:</h2>
+        <h2 className="text-2xl font-bold mb-4">Ternary Operator Use:</h2>
 <p className="mb-4">
         
         . Perfect for simple true/false JSX decisions.
@@ -129,7 +135,7 @@ function ConditionalRendering() {
           It renders content{" "}
           <code className="text-red-500">only if condition is true</code> If false → shows nothing.
         </p>
-       <h2 className="text-2xl font-bold mb-4">Use:</h2>
+       <h2 className="text-2xl font-bold mb-4"> Logical && Operator Use:</h2>
         <p className="mb-4">
         
         . Good for showing UI only when something is true.
@@ -180,6 +186,15 @@ function ConditionalRendering() {
         ))}
       </tbody>
     </table>
+    <div className="flex justify-between mt-6">
+        <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <span className="mr-2">❮</span> Previous
+        </Link>
+ 
+        <Link to="/React/ListsKeys" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          Next <span className="ml-2">❯</span>
+        </Link>
+      </div>
   </div>
 </div>
     </div>
