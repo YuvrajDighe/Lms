@@ -64,15 +64,15 @@ export function ReactComponent() {
       </p>
 
 
-      <div className="mt-5 text-black">
+      <div className="mt-5 text-white">
       {/* Class Component Example Block */}
-      <div className="bg-gray-100 p-4 rounded mb-8">
+      <div className=" p-4 rounded mb-8">
         <h2 className="text-xl font-bold mb-2">Example</h2>
         <p className="mb-4">
           Create a Class component called{" "}
           <code className="text-red-500">Student</code>
         </p>
-        <div className="bg-white p-4 rounded border border-gray-300">
+        <div className="bg-black text-white p-4 rounded border border-gray-300">
           <pre>
             <code>
 {`class Student extends React.Component {
@@ -98,13 +98,13 @@ export function ReactComponent() {
       </p>
 
       {/* Function Component Example Block */}
-      <div className="bg-gray-100 p-4 rounded">
+      <div className=" p-4 rounded">
         <h2 className="text-xl font-bold mb-2">Example</h2>
         <p className="mb-4">
           Create a Function component called{" "}
           <code className="text-red-500">Student</code>
         </p>
-        <div className="bg-white p-4 rounded border border-gray-300">
+        <div className="bg-black text-white p-4 rounded border border-gray-300">
           <pre>
             <code>
 {`function Student() {
@@ -116,6 +116,61 @@ export function ReactComponent() {
       </div>
     </div>
     
+
+    <div>
+      <h1 className="text-[30px] mt-5">Functional Components :-</h1>
+      <h1 className="text-[25px] mt-5">What is Functional Component</h1>
+      <p className="text-[18px] mt-2 ml-2">✅ They are just normal JavaScript functions.</p>
+
+      <p className="text-[18px] mt-2 ml-2">✅ They do not have their own state (old method, before hooks).</p>
+
+      <p className="text-[18px] mt-2 ml-2">✅ They can take data as input (called props).</p>
+
+      <p className="text-[18px] mt-2 ml-2">✅ They return what should be shown on the screen.</p>
+    </div>
+
+    <div className=" p-4 rounded mb-8">
+  <h2 className="text-xl font-bold mb-2">Example :-</h2>
+  <p className="mb-4">
+    Create a Functional component called{" "}
+    <code className="text-red-500">Welcome</code>
+  </p>
+  <div className="bg-black p-4 rounded ">
+    <pre>
+      <code>
+{`function Welcome() {
+  return (
+    <div>
+      <h1>Welcome to React!</h1>
+      <p>This is a Functional Component example.</p>
+    </div>
+  );
+}
+
+export default Welcome;`}
+      </code>
+    </pre>
+  </div>
+</div>
+
+<div>
+  <h1 className="text-[30px] mt-5">Class Components :-</h1>
+  <h1 className="text-[25px] mt-5">What is Class Component</h1>
+
+  <p className="text-[18px] mt-2 ml-2">
+      ✅ A Class Component is a way to create components in React using JavaScript classes.
+  </p>
+
+  <p className="text-[18px] mt-2 ml-2">
+    ✅ It extends <code>React.Component</code> and has a <code>render()</code> method that returns what should be displayed.
+  </p>
+
+  <p className="text-[18px] mt-2 ml-2">
+    ✅ Before React Hooks, Class Components were used when we needed state or lifecycle methods in a component.
+  </p>
+</div>
+
+
     </div>
   );
 }
