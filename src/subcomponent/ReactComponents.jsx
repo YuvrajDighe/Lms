@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export function ReactComponent() {
   return (
     <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
@@ -5,15 +6,15 @@ export function ReactComponent() {
       <h1 className="text-[40px]">React Components</h1>
 
       {/* Buttons */}
-      <div className="flex justify-between mt-6">
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-          <span className="mr-2">❮</span> Previous
-        </button>
+       <div className="flex justify-between mt-6">
+            <Link to="/React/Jsx" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+              <span className="mr-2">❮</span> Previous
+            </Link>
 
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-          Next <span className="ml-2">❯</span>
-        </button>
-      </div>
+            <Link to="/React/StateManegment" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+              Next <span className="ml-2">❯</span>
+            </Link>
+          </div>
 
       {/* First Paragraph */}
       <p className="mt-5 text-[18px]">
@@ -170,7 +171,15 @@ export default Welcome;`}
   </p>
 </div>
 
+ <div className="flex justify-between mt-6">
+            <Link to="/React/Jsx" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+              <span className="mr-2">❮</span> Previous
+            </Link>
 
+            <Link to="/React/StateManegment" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+              Next <span className="ml-2">❯</span>
+            </Link>
+          </div>
     </div>
   );
 }
