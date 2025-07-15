@@ -1,18 +1,21 @@
+  import { Link } from "react-router-dom";
+
 export function ReactClass() {
   return (
     <>
         <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
     <h1 className="text-4xl font-bold text-white"> React Component Lifecycle</h1>
-    
+
     <div className="flex justify-between mt-6">
-            <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-              <span className="mr-2">❮</span> Previous
-            </button>
-     
-            <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-              Next <span className="ml-2">❯</span>
-            </button>
-          </div>
+        <Link to="/React/StateManegment" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <span className="mr-2">❮</span> Previous
+        </Link>
+ 
+        <Link to="/React/Hooks" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          Next <span className="ml-2">❯</span>
+        </Link>
+      </div>
+    
     
            <div className="  mt-8 rounded shadow-md ">
             <div >
@@ -496,7 +499,17 @@ useEffect(() => {
            
     </div>
     
+     <div className="flex justify-between mt-6">
+        <Link to="/React/StateManegment" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <span className="mr-2">❮</span> Previous
+        </Link>
+ 
+        <Link to="/React/Hooks" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          Next <span className="ml-2">❯</span>
+        </Link>
+      </div> 
      
+    
    </div>
        
         
