@@ -1,8 +1,25 @@
+import { Link } from "react-router-dom";
+
+
 export default function Hooks() {
   return (
     <div style={{ backgroundColor: "#464859", color: "white", padding: "20px", fontFamily: "Arial" }}>
       <h1 className="text-3xl font-bold mb-4">React Hooks</h1>
+    <div className="flex justify-between mt-6">
+          <Link
+          to="/React/ReactClass"
+            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+          >
+            <span className="mr-2">❮</span> Previous
+          </Link>
 
+          <Link
+            to="/React/EventHandling"
+            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+          >
+            Next <span className="ml-2">❯</span>
+          </Link>
+        </div>
       <div className="mb-6">
         <p className="mb-2">
           Hooks were added in React 16.8. They let you use state and other features without writing a class.
@@ -91,6 +108,21 @@ export default NameDisplay;`}
           If you have logic that needs to be reused across components, you can build your own Hooks.
         </p>
       </div>
+      <div className="flex justify-between mt-6">
+          <Link
+          to="/React/ReactClass"
+            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+          >
+            <span className="mr-2">❮</span> Previous
+          </Link>
+
+          <Link
+            to="/React/EventHandling"
+            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+          >
+            Next <span className="ml-2">❯</span>
+          </Link>
+        </div>
     </div>
   );
 }
