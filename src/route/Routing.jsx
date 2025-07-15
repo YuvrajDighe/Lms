@@ -20,6 +20,14 @@ import Styling from "../subcomponent/Styling";
 import Redux from "../subcomponent/Redux";
 import BundlersBuild from "../subcomponent/BundlersBuild";
 import Miscellaneous from "../subcomponent/Miscellaneous";
+
+import Callback from "../hookspages/UseCallback";
+import Context from "../hookspages/UseContext";
+import Effect from "../hookspages/UseEffect";
+import Memo from "../hookspages/UseMemo";
+import Reducer from "../hookspages/UseReducer";
+import Ref from "../hookspages/UseRef";
+import State from "../hookspages/UseState";
 function Routing() {
   return (
     <Router>
@@ -46,6 +54,14 @@ function Routing() {
                   <Route path="Redux" element={<Redux />} />
                     <Route path="BundlersBuild" element={<BundlersBuild />} />
                     <Route path="Miscellaneous" element={<Miscellaneous />} />
+
+                    <Route path="State" element={<State />} />
+                    <Route path="Ref" element={<Ref />} />
+                    <Route path="Effect" element={<Effect />} />
+                    <Route path="Memo" element={<Memo />} />
+                    <Route path="Reducer" element={<Reducer />} />
+                    <Route path="Callback" element={<Callback />} />
+                    <Route path="Context" element={<Context />} />
            {/* <Route path="ReactEs6" element={<ReactEs6 />} /> */}
          
             

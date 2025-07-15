@@ -1,13 +1,28 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Sidebar() {
-  // Common classes for all links
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [showHooksDropdown, setShowHooksDropdown] = useState(false);
+
+  // Auto open if inside /React/Hooks
+  useEffect(() => {
+    if (location.pathname.startsWith("/React/Hooks")) {
+      setShowHooksDropdown(true);
+    }
+  }, [location.pathname]);
+
   const linkClass =
     "block w-full py-2 rounded transition-colors duration-200";
 
-  // Function to handle active and hover styling
   const getLinkClass = ({ isActive }) =>
     `${linkClass} ${isActive ? "bg-gray-600" : "hover:bg-gray-600"}`;
+
+  const handleHooksClick = (e) => {
+    e.preventDefault();
+    navigate("/React/Hooks");
+  };
 
   return (
     <aside
@@ -15,8 +30,8 @@ function Sidebar() {
       style={{
         backgroundColor: "#3A3A4B",
         fontFamily: "'Afacad Flux', sans-serif",
-        scrollbarWidth: "none", /* Firefox */
-        msOverflowStyle: "none" /* IE and Edge */
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
       }}
     >
       <div className="p-6 space-y-2">
@@ -38,9 +53,55 @@ function Sidebar() {
         <NavLink to="/React/ReactClass" className={getLinkClass}>
           React Lifecycle (Class)
         </NavLink>
-        <NavLink to="/React/Hooks" className={getLinkClass}>
-          Hooks
-        </NavLink>
+
+        {/* 🔁 Hover + Click Controlled Hooks Dropdown */}
+        <div
+          className="relative"
+          onMouseEnter={() => setShowHooksDropdown(true)}
+          onMouseLeave={() => setShowHooksDropdown(false)}
+        >
+          <NavLink
+            to="/React/Hooks"
+            onClick={handleHooksClick}
+            className={({ isActive }) =>
+              `${linkClass} w-full text-left ${
+                showHooksDropdown || isActive
+                  ? "bg-gray-600"
+                  : "hover:bg-gray-600"
+              }`
+            }
+          >
+            Hooks {showHooksDropdown ? "🔼" : "🔽"}
+          </NavLink>
+
+          {showHooksDropdown && (
+            <div className="pl-4 space-y-1">
+              <NavLink to="/React/State" className={getLinkClass}>
+                useState
+              </NavLink>
+              <NavLink to="/React/Ref" className={getLinkClass}>
+                useRef
+              </NavLink>
+              <NavLink to="/React/Effect" className={getLinkClass}>
+                useEffect
+              </NavLink>
+              <NavLink to="/React/Memo" className={getLinkClass}>
+                UseMemo
+              </NavLink>
+              <NavLink to="/React/Reducer" className={getLinkClass}>
+                useReducer
+              </NavLink>
+              <NavLink to="/React/Callback" className={getLinkClass}>
+                useCallback
+              </NavLink>
+              <NavLink to="/React/Context" className={getLinkClass}>
+                useContext
+              </NavLink>
+            </div>
+          )}
+        </div>
+
+        {/* Rest of links */}
         <NavLink to="/React/EventHandling" className={getLinkClass}>
           Event Handling
         </NavLink>
