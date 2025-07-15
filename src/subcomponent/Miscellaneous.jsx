@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
  
 function CodeBlock({ code }) {
   return (
-    <div className="mt-5 text-black">
-      <div className="bg-gray-100 p-4 rounded mb-8">
+    <div className="mt-5 text-white">
+      <div className="p-4 rounded mb-8">
         <h2 className="text-xl font-bold mb-2">Example</h2>
-        <div className="bg-white p-4 rounded border border-gray-300">
+        <div className="bg-black text-white p-4 rounded ">
           <pre className="overflow-x-auto">
             <code>{code}</code>
           </pre>
@@ -15,6 +15,7 @@ function CodeBlock({ code }) {
     </div>
   );
 }
+
  
 function Miscellaneous() {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ const handleClick = useCallback(() => {
           onClick={() => navigate("/React/BundlersBuild")}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
-          <span className="mr-2">❮</span> Previous
+          <span className="mr-2 ">❮</span> Previous
         </button>
         {/* <button
           onClick={() => navigate("/React")}
