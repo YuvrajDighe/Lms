@@ -1,42 +1,37 @@
-import React, { useState } from 'react';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-
-
-function RunExample({ code }) {
+import React from "react";
+import { useNavigate } from "react-router-dom";
+ 
+function CodeBlock({ code }) {
   return (
-    <div className="border rounded-md mt-4">
-      <LiveProvider code={code} noInline>
-        <div className="grid md:grid-cols-2 gap-4 p-4">
-          <div className="bg-gray-800 text-white text-sm rounded p-2">
-            <LiveEditor className="min-h-[200px]" />
-          </div>
-          <div className="border p-4 rounded">
-            <LivePreview />
-          </div>
+    <div className="mt-5 text-black">
+      <div className="bg-gray-100 p-4 rounded mb-8">
+        <h2 className="text-xl font-bold mb-2">Example</h2>
+        <div className="bg-white p-4 rounded border border-gray-300">
+          <pre className="overflow-x-auto">
+            <code>{code}</code>
+          </pre>
         </div>
-        <LiveError className="text-red-500 font-mono p-2" />
-      </LiveProvider>
+      </div>
     </div>
   );
 }
-
+ 
 function StateManagement() {
-  const whatIsState = `
-function App() {
+  const navigate = useNavigate();
+ 
+  const whatIsState = `function App() {
   const [message, setMessage] = React.useState("Hello, World!");
-
   return (
     <div>
       <h1>{message}</h1>
-      <button onClick={() => setMessage("You clicked the button!")}>\n        Change Message
+      <button onClick={() => setMessage("You clicked the button!")}>
+        Change Message
       </button>
     </div>
   );
-}
-render(<App />);`;
-
-  const useStateExample = `
-function Counter() {
+}`;
+ 
+  const useStateExample = `function Counter() {
   const [count, setCount] = React.useState(0);
   return (
     <div>
@@ -46,13 +41,10 @@ function Counter() {
       <button onClick={() => setCount(0)}>🔁 Reset</button>
     </div>
   );
-}
-render(<Counter />);`;
-
-  const propsExample = `
-function App() {
+}`;
+ 
+  const propsExample = `function App() {
   const [name, setName] = React.useState("Rushikesh");
-
   return (
     <div>
       <h1>Parent Component</h1>
@@ -60,7 +52,6 @@ function App() {
     </div>
   );
 }
-
 function Child({ name }) {
   return (
     <div>
@@ -68,13 +59,10 @@ function Child({ name }) {
       <p>Hi, {name}! 👋</p>
     </div>
   );
-}
-render(<App />);`;
-
-  const liftingExample = `
-function App() {
+}`;
+ 
+  const liftingExample = `function App() {
   const [name, setName] = React.useState("");
-
   return (
     <div>
       <h1>Lifting State Up Example</h1>
@@ -83,7 +71,6 @@ function App() {
     </div>
   );
 }
-
 function NameInput({ name, setName }) {
   return (
     <input
@@ -94,78 +81,85 @@ function NameInput({ name, setName }) {
     />
   );
 }
-
 function NameDisplay({ name }) {
   return <p>Hello, {name || "Stranger"}!</p>;
-}
-render(<App />);`;
-
+}`;
+ 
   return (
-    <div className="bg-[#464859] min-h-screen text-white" >
-      <header className=" py-4 px-6 ">
-        <div className="max-w-5xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">State Management Tutorial</h1>
-        </div>
-      </header>
-
-      <main className="max-w-4xl mx-auto p-6 ">
-        <div className="w-full flex justify-between">
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">previous</button>
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Next</button>
-        </div><br />
-        <section className="bg-green-50 border border-green-200 p-6 rounded mb-8 text-black">
-          <h2 className="text-xl font-semibold text-green-700 mb-2">Learn State Management</h2>
-          <p className="mb-2">
-            This React tutorial will teach you how to manage state using <code>useState</code>, props,
-            and how to lift state up between components.
-          </p>
-          <button className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
-            Start learning now »
-          </button>
-        </section>
-
-        <section>
-          <h3 className="text-2xl font-semibold text-teal-600 mt-8">1. What is State?</h3>
-          <p className="mt-2">
-            State in React is an object that holds dynamic data for a component.
-            It controls how a component behaves and renders based on data that can change over time.
-          </p>
-          <RunExample code={whatIsState} />
-        </section>
-
-        <section>
-          <h3 className="text-2xl font-semibold text-teal-600 mt-8">2. useState Hook</h3>
-          <p className="mt-2">
-            The <code>useState</code> hook lets you add state to functional components.
-            It returns the current state value and a function to update it.
-          </p>
-          <RunExample code={useStateExample} />
-        </section>
-
-        <section>
-          <h3 className="text-2xl font-semibold text-teal-600 mt-8">3. State vs Props</h3>
-          <p className="mt-2">
-            <strong>State:</strong> is used for internal data within a component. It is mutable and controlled inside the component.<br />
-            <strong>Props:</strong> are read-only values passed from parent to child to make components reusable.
-          </p>
-          <RunExample code={propsExample} />
-        </section>
-
-        <section>
-          <h3 className="text-2xl font-semibold text-teal-600 mt-8">4. Lifting State Up</h3>
-          <p className="mt-2">
-            Lifting state up is the process of moving shared state to the closest common ancestor of components
-            that need to access it. This helps synchronize the data across components.
-          </p>
-          <RunExample code={liftingExample} /><br />
-          <div className="w-full flex justify-between">
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">previous</button>
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Next</button>
-        </div>
-        </section>
-      </main>
+    <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
+      <h1 className="text-[40px]">State Management Tutorial</h1>
+ 
+      {/* Top Navigation */}
+      <div className="flex justify-between mt-6">
+        <button
+          onClick={() => navigate("/React/ReactComponent")}
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          <span className="mr-2">❮</span> Previous
+        </button>
+        <button
+          onClick={() => navigate("/React/ReactClass")}
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          Next <span className="ml-2">❯</span>
+        </button>
+      </div>
+ 
+      {/* Content */}
+      <p className="mt-6 text-[18px] text-white">
+        This React tutorial will teach you how to manage state using{" "}
+        <code className="text-red-500">useState</code>, props, and how to lift state up between components.
+      </p>
+ 
+      <h2 className="text-[30px] mt-6 text-white">1. What is State?</h2>
+      <p className="mt-3 text-[18px] text-white">
+        In React, <strong>state</strong> is a built-in object that stores property values that belong to a component.
+        When the state changes, the component re-renders to reflect the changes in the UI.
+        You can think of state as the "memory" of your component—it tracks data that changes over time like form inputs, toggles, etc.
+      </p>
+      <CodeBlock code={whatIsState} />
+ 
+      <h2 className="text-[30px] mt-6 text-white">2. useState Hook</h2>
+      <p className="mt-3 text-[18px] text-white">
+        The <code className="text-red-500">useState</code> hook is a function provided by React that allows you to add state to functional components.
+        It returns an array with two elements: the current state value, and a function to update that value.
+        Each time the setter function is called, the component re-renders with the new state.
+      </p>
+      <CodeBlock code={useStateExample} />
+ 
+      <h2 className="text-[30px] mt-6 text-white">3. State vs Props</h2>
+      <p className="mt-3 text-[18px] text-white">
+        <strong>State:</strong> is used to manage data <strong>inside</strong> a component. It's <strong>local</strong>, <strong>mutable</strong>, and only visible to the component that owns it.<br />
+        <strong>Props:</strong> are used to pass data <strong>from a parent to a child</strong> component. Props are <strong>read-only</strong>, making child components reusable and controlled by the parent.
+      </p>
+      <CodeBlock code={propsExample} />
+ 
+      <h2 className="text-[30px] mt-6 text-white">4. Lifting State Up</h2>
+      <p className="mt-3 text-[18px] text-white">
+        Sometimes, multiple components need to share the same state. Instead of duplicating it, you can "lift the state up" to their <strong>common parent component</strong>.
+        This parent then passes the state and its updater function to the children via props, ensuring synchronized data across components.
+      </p>
+      <CodeBlock code={liftingExample} />
+ 
+      {/* Bottom Navigation */}
+      <div className="flex justify-between mt-10">
+        <button
+          onClick={() => navigate("/React/ReactComponent")}
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          <span className="mr-2">❮</span> Previous
+        </button>
+        <button
+          onClick={() => navigate("/React/ReactClass")}
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          Next <span className="ml-2">❯</span>
+        </button>
+      </div>
     </div>
   );
 }
-
+ 
 export default StateManagement;
+ 
+ 
