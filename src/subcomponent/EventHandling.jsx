@@ -65,7 +65,7 @@ function EventHandling() {
             </p>
           </div>
 
-          <h2 className="text-[25px] font-semibold mt-5 mb-2">Common Events:</h2>
+          <h2 className="text-[25px] font-semibold mt-5 mb-2">Type Events:</h2>
 
           <ul className="list-disc pl-6">
             <li className="text-[18px] mb-2">
@@ -74,7 +74,44 @@ function EventHandling() {
             <li className="text-[18px] mb-2">
               <span className="font-semibold">onChange:</span> Used when value changes, e.g. in input fields.
             </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onSubmit:</span> Triggered when a form is submitted.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onFocus:</span> Triggered when an element gains focus.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onBlur:</span> Triggered when an element loses focus.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onMouseEnter:</span> Triggered when the mouse pointer enters the element.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onMouseLeave:</span> Triggered when the mouse pointer leaves the element.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onKeyDown:</span> Triggered when a key is pressed down.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onKeyUp:</span> Triggered when a key is released.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onInput:</span> Triggered every time the input value changes.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onDoubleClick:</span> Triggered when an element is double-clicked.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onDrag:</span> Triggered when an element is dragged.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onDrop:</span> Triggered when a dragged item is dropped.
+            </li>
+            <li className="text-[18px] mb-2">
+              <span className="font-semibold">onScroll:</span> Triggered when the user scrolls an element.
+            </li>
           </ul>
+
 
           <h2 className="text-[25px] font-semibold mt-5 mb-2">this Binding in Class Components</h2>
 
@@ -114,7 +151,7 @@ function EventHandling() {
 
 
 
-        </div> 
+        </div>
 
       </div>
     </>

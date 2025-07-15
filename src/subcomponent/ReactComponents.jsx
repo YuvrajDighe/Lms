@@ -73,7 +73,7 @@ export function ReactComponent() {
           Create a Class component called{" "}
           <code className="text-red-500">Student</code>
         </p>
-        <div className="bg-black text-white p-4 rounded border border-gray-300">
+        <div className="bg-black text-white p-4 rounded">
           <pre>
             <code>
 {`class Student extends React.Component {
@@ -105,7 +105,7 @@ export function ReactComponent() {
           Create a Function component called{" "}
           <code className="text-red-500">Student</code>
         </p>
-        <div className="bg-black text-white p-4 rounded border border-gray-300">
+        <div className="bg-black text-white p-4 rounded ">
           <pre>
             <code>
 {`function Student() {
