@@ -7,6 +7,19 @@ p, h1, h2 {
 
 
 
+/* src/index.css ya App.jsx ke upar include hone wali CSS file me daal */
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slow-spin {
+  animation: slowSpin 10s linear infinite;
+}
 
 @tailwind base;
 @tailwind components;

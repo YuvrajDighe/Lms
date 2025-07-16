@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import ReactLayout from "./ReactLayout";
-import ReactPage from "../component/React";
+import React from "../component/React";
 import ReactIntro from "../subcomponent/ReactIntro";
 import PropsIntro from "../subcomponent/ReactProp";
 import ReactComponent from "../subcomponent/ReactComponents";
@@ -53,9 +53,11 @@ function Routing() {
       <Navbar />
 
       <Routes>
+         {/* ✅ Redirect base path "/" to "/React" */}
+        <Route path="/" element={<React />} />
         {/* React-related routes (with sidebar) */}
         <Route path="/React" element={<ReactLayout />}>
-          <Route index element={<ReactPage />} />
+          <Route index element={<React />} />
           <Route path="ReactIntro" element={<ReactIntro />} />
                <Route path="EnvironmentSetup" element={<EnvironmentSetup />} />
                <Route path="Jsx" element={<Jsx />} />
