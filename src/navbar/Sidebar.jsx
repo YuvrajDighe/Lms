@@ -4,12 +4,17 @@ import { useEffect, useState } from "react";
 function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [showHooksDropdown, setShowHooksDropdown] = useState(false);
 
-  // Auto open if inside /React/Hooks
+  const [showHooksDropdown, setShowHooksDropdown] = useState(false);
+  const [showEventsDropdown, setShowEventsDropdown] = useState(false);
+
+  // Auto open dropdowns if inside their respective routes
   useEffect(() => {
     if (location.pathname.startsWith("/React/Hooks")) {
       setShowHooksDropdown(true);
+    }
+    if (location.pathname.startsWith("/React/EventHandling")) {
+      setShowEventsDropdown(true);
     }
   }, [location.pathname]);
 
@@ -22,6 +27,13 @@ function Sidebar() {
   const handleHooksClick = (e) => {
     e.preventDefault();
     navigate("/React/Hooks");
+    setShowHooksDropdown(true);
+  };
+
+  const handleEventsClick = (e) => {
+    e.preventDefault();
+    navigate("/React/EventHandling");
+    setShowEventsDropdown(true);
   };
 
   return (
@@ -54,7 +66,7 @@ function Sidebar() {
           React Lifecycle (Class)
         </NavLink>
 
-        {/* 🔁 Hover + Click Controlled Hooks Dropdown */}
+        {/* 🔽 Hooks Dropdown */}
         <div
           className="relative"
           onMouseEnter={() => setShowHooksDropdown(true)}
@@ -86,7 +98,7 @@ function Sidebar() {
                 useEffect
               </NavLink>
               <NavLink to="/React/Memo" className={getLinkClass}>
-                UseMemo
+                useMemo
               </NavLink>
               <NavLink to="/React/Reducer" className={getLinkClass}>
                 useReducer
@@ -97,14 +109,24 @@ function Sidebar() {
               <NavLink to="/React/Context" className={getLinkClass}>
                 useContext
               </NavLink>
+              <NavLink to="/React/Debug" className={getLinkClass}>
+                useDebugValue
+              </NavLink>
+              <NavLink to="/React/Layout" className={getLinkClass}>
+                useLayoutEffect
+              </NavLink>
+              <NavLink to="/React/Imperative" className={getLinkClass}>
+                useImperativeHandle
+              </NavLink>
             </div>
           )}
         </div>
 
-        {/* Rest of links */}
-        <NavLink to="/React/EventHandling" className={getLinkClass}>
-          Event Handling
+        <NavLink to="/React/PropsIntro" className={getLinkClass}>
+          Data Binding (Props)
         </NavLink>
+
+        {/* Other Links */}
         <NavLink to="/React/ConditionalRendering" className={getLinkClass}>
           Conditional Rendering
         </NavLink>
@@ -114,9 +136,76 @@ function Sidebar() {
         <NavLink to="/React/Froms" className={getLinkClass}>
           Forms
         </NavLink>
-        <NavLink to="/React/PropsIntro" className={getLinkClass}>
-          Data Binding (Props)
-        </NavLink>
+       
+
+         {/* 🔽 Events Dropdown */}
+        <div
+          className="relative"
+          onMouseEnter={() => setShowEventsDropdown(true)}
+          onMouseLeave={() => setShowEventsDropdown(false)}
+        >
+          <NavLink
+            to="/React/EventHandling"
+            onClick={handleEventsClick}
+            className={({ isActive }) =>
+              `${linkClass} w-full text-left ${
+                showEventsDropdown || isActive
+                  ? "bg-gray-600"
+                  : "hover:bg-gray-600"
+              }`
+            }
+          >
+            Events {showEventsDropdown ? "🔼" : "🔽"}
+          </NavLink>
+
+          {showEventsDropdown && (
+            <div className="pl-4 space-y-1">
+              <NavLink to="/React/Click" className={getLinkClass}>
+                onClick
+              </NavLink>
+              <NavLink to="/React/Change" className={getLinkClass}>
+                onChange
+              </NavLink>
+              <NavLink to="/React/Submit" className={getLinkClass}>
+                onSubmit
+              </NavLink>
+              <NavLink to="/React/Blur" className={getLinkClass}>
+                onBlur
+              </NavLink>
+              <NavLink to="/React/Scroll" className={getLinkClass}>
+                onScroll
+              </NavLink>
+              <NavLink to="/React/Focus" className={getLinkClass}>
+                onFocus
+              </NavLink>
+              <NavLink to="/React/KeyUp" className={getLinkClass}>
+                onKeyUp
+              </NavLink>
+             
+              <NavLink to="/React/KeyDown" className={getLinkClass}>
+                onKeyDown
+              </NavLink>
+              <NavLink to="/React/DoubleClick" className={getLinkClass}>
+                onDoubleClick
+              </NavLink>
+              <NavLink to="/React/OnInput" className={getLinkClass}>
+               OnInput
+              </NavLink>
+              <NavLink to="/React/Drag" className={getLinkClass}>
+                onDrag
+              </NavLink>
+              <NavLink to="/React/Drop" className={getLinkClass}>
+                onDrop
+              </NavLink>
+              <NavLink to="/React/MouseEnter" className={getLinkClass}>
+                onMouseEnter
+              </NavLink>
+              <NavLink to="/React/MouseLeave" className={getLinkClass}>
+                onMouseLeave
+              </NavLink>
+            </div>
+          )}
+        </div>
         <NavLink to="/React/ReactRouter" className={getLinkClass}>
           React Router
         </NavLink>
