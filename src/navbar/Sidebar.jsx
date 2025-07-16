@@ -59,6 +59,9 @@ function Sidebar() {
         <NavLink to="/React/ReactComponent" className={getLinkClass}>
           React Component
         </NavLink>
+         <NavLink to="/React/ComponentRendering" className={getLinkClass}>
+         ComponentRendering
+        </NavLink>
         <NavLink to="/React/StateManegment" className={getLinkClass}>
           State Management
         </NavLink>
