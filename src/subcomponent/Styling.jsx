@@ -4,7 +4,14 @@ function StylingGuide() {
   return (
     <div className="w-full p-6 font-sans min-h-screen bg-[#464859] text-white">
       {/* Top Navigation */}
-      <div className="flex justify-between mb-8">
+     
+
+      {/* Header */}
+      <header className="mb-10">
+        <h1 className="text-4xl font-bold mb-2">React Styling Guide</h1>
+        <p className="text-gray-300">Learn different ways to style your React components</p>
+      </header>
+       <div className="flex justify-between mb-8">
         <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
         </button>
@@ -13,14 +20,8 @@ function StylingGuide() {
         </button>
       </div>
 
-      {/* Header */}
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold mb-2">React Styling Guide</h1>
-        <p className="text-gray-300">Learn different ways to style your React components</p>
-      </header>
-
       {/* Inline CSS Section */}
-      <section className="mb-10 bg-gray-700 rounded-lg p-6 border-l-4 border-blue-500">
+      <section className="mb-10 bg-gray-700 rounded-lg p-6 ">
         <h2 className="text-2xl font-semibold mb-4 flex items-center">
           <span className="inline-flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full mr-3">1</span>
           Inline CSS
@@ -66,7 +67,7 @@ function StylingGuide() {
       </section>
 
       {/* CSS Modules Section */}
-      <section className="mb-10 bg-gray-700 rounded-lg p-6 border-l-4 border-green-500">
+      <section className="mb-10 bg-gray-700 rounded-lg p-6 ">
         <h2 className="text-2xl font-semibold mb-4 flex items-center">
           <span className="inline-flex items-center justify-center w-8 h-8 bg-green-500 rounded-full mr-3">2</span>
           CSS Modules
@@ -123,7 +124,7 @@ function Component() {
       </section>
 
       {/* Styled Components Section */}
-      <section className="mb-10 bg-gray-700 rounded-lg p-6 border-l-4 border-purple-500">
+      <section className="mb-10 bg-gray-700 rounded-lg p-6 ">
         <h2 className="text-2xl font-semibold mb-4 flex items-center">
           <span className="inline-flex items-center justify-center w-8 h-8 bg-purple-500 rounded-full mr-3">3</span>
           Styled Components
@@ -181,43 +182,109 @@ const Button = styled.button\`
         </div>
       </section>
 
-      {/* Comparison Table */}
-      <section className="mb-10 bg-gray-700 rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-6">Comparison Table</h2>
+     {/* Comparison Table */}
+<section className="mb-10 bg-gray-700 rounded-lg p-6">
+  <h2 className="text-2xl font-semibold mb-6 flex items-center">
+    <span className="inline-flex items-center justify-center w-8 h-8 bg-yellow-500 rounded-full mr-3">4</span>
+    Styling Methods Comparison
+  </h2>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-600">
-            <thead className="bg-gray-600">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Method</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Scoping</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Dynamic Styles</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Performance</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-600">
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Inline CSS</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Component</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Excellent</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Good</td>
-              </tr>
-              <tr className="bg-gray-600">
-                <td className="px-6 py-4 whitespace-nowrap">CSS Modules</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Component</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Limited</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Excellent</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Styled Components</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Component</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Excellent</td>
-                <td className="px-6 py-4 whitespace-nowrap text-gray-300">Good (runtime overhead)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+  <div className="overflow-x-auto">
+    <table className="min-w-full divide-y divide-gray-600">
+      <thead className="bg-gray-600">
+        <tr>
+          <th className="px-6 py-4 text-left text-sm font-medium text-gray-200 uppercase tracking-wider">Method</th>
+          <th className="px-6 py-4 text-left text-sm font-medium text-gray-200 uppercase tracking-wider">Pros</th>
+          <th className="px-6 py-4 text-left text-sm font-medium text-gray-200 uppercase tracking-wider">Cons</th>
+          <th className="px-6 py-4 text-left text-sm font-medium text-gray-200 uppercase tracking-wider">Best For</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-gray-600 bg-gray-700">
+        {/* Inline CSS Row */}
+        <tr className="hover:bg-gray-600 transition-colors">
+          <td className="px-6 py-4 whitespace-nowrap font-medium">
+            <div className="flex items-center">
+              <span className="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+              Inline CSS
+            </div>
+          </td>
+          <td className="px-6 py-4">
+            <ul className="list-disc pl-5 space-y-1 text-gray-200">
+              <li>Simple to implement</li>
+              <li>Great for dynamic styles</li>
+              <li>No extra files needed</li>
+            </ul>
+          </td>
+          <td className="px-6 py-4">
+            <ul className="list-disc pl-5 space-y-1 text-gray-200">
+              <li>Hard to maintain</li>
+              <li>No pseudo-classes</li>
+              <li>No media queries</li>
+            </ul>
+          </td>
+          <td className="px-6 py-4 text-gray-200">
+            Quick prototypes, dynamic styles, small components
+          </td>
+        </tr>
+
+        {/* CSS Modules Row */}
+        <tr className="hover:bg-gray-600 transition-colors bg-gray-650">
+          <td className="px-6 py-4 whitespace-nowrap font-medium">
+            <div className="flex items-center">
+              <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+              CSS Modules
+            </div>
+          </td>
+          <td className="px-6 py-4">
+            <ul className="list-disc pl-5 space-y-1 text-gray-200">
+              <li>Scoped styles</li>
+              <li>Full CSS features</li>
+              <li>Great performance</li>
+            </ul>
+          </td>
+          <td className="px-6 py-4">
+            <ul className="list-disc pl-5 space-y-1 text-gray-200">
+              <li>Separate files</li>
+              <li>Harder dynamic styles</li>
+              <li>No JS in CSS</li>
+            </ul>
+          </td>
+          <td className="px-6 py-4 text-gray-200">
+            Large projects, team collaboration, traditional CSS
+          </td>
+        </tr>
+
+        {/* Styled Components Row */}
+        <tr className="hover:bg-gray-600 transition-colors">
+          <td className="px-6 py-4 whitespace-nowrap font-medium">
+            <div className="flex items-center">
+              <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
+              Styled Components
+            </div>
+          </td>
+          <td className="px-6 py-4">
+            <ul className="list-disc pl-5 space-y-1 text-gray-200">
+              <li>Dynamic styling</li>
+              <li>Theming support</li>
+              <li>Colocated styles</li>
+            </ul>
+          </td>
+          <td className="px-6 py-4">
+            <ul className="list-disc pl-5 space-y-1 text-gray-200">
+              <li>Runtime overhead</li>
+              <li>Learning curve</li>
+              <li>Extra dependency</li>
+            </ul>
+          </td>
+          <td className="px-6 py-4 text-gray-200">
+            Dynamic UIs, themeable apps, JS-powered CSS
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
 
       {/* Bottom Navigation */}
       <div className="flex justify-between mt-8">
