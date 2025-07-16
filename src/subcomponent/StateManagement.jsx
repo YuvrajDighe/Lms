@@ -88,7 +88,7 @@ function NameDisplay({ name }) {
 
   return (
     <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
-      <h1 className="text-[40px]">State Management Tutorial</h1>
+      <h1 className="text-[40px]">State Management</h1>
 
       <div className="flex justify-between mt-6">
         <button
