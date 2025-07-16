@@ -36,7 +36,7 @@ function FocusInput() {
       {/* Navigation */}
       <div className="flex justify-between mb-8">
         <Link
-          to=""
+          to="/React/State"
           className="flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
         >
           <ChevronLeft size={18} className="mr-2" />
@@ -118,6 +118,22 @@ function FocusInput() {
           {copyMessage}
         </div>
       )}
+      <div className="flex justify-between mb-8">
+        <Link
+          to="/React/State"
+          className="flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
+        >
+          <ChevronLeft size={18} className="mr-2" />
+          Previous
+        </Link>
+        <Link
+          to="/React/useMemo"
+          className="flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
+        >
+          Next
+          <ChevronRight size={18} className="ml-2" />
+        </Link>
+      </div>
     </div>
   );
 };

@@ -87,7 +87,7 @@ export default Toggle;`;
     <div className="text-white p-6" style={{ backgroundColor: "#464859" }}>
       <div>
         <h1 className="text-[40px] mt-5">useState Hook :-</h1>
-
+        
         <h2 className="text-[25px] mt-5">What is useState?</h2>
         <p className="text-[18px] mt-2 ml-2">
           • useState is a <strong>React Hook </strong> used to<strong> add state </strong>in Functional Components.
