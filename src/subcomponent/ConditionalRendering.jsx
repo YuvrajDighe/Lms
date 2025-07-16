@@ -17,7 +17,7 @@ function ConditionalRendering() {
         </Link>
       </div>
 
-       <div className="  mt-8 rounded shadow-md ">
+       <div className="  mt-8  ">
         <div >
               <h2 className="text-2xl font-bold mb-4">What is Conditional Rendering</h2>
         </div>
@@ -28,7 +28,7 @@ function ConditionalRendering() {
 
     
       <h2 className="text-2xl font-bold mb-4"> ConditionalRendering Use:</h2>
-      <>
+      
 <p className="mb-4">
         
         . To show login message if the user is logged in
@@ -42,7 +42,7 @@ function ConditionalRendering() {
         . To control what appears on screen dynamically.
       </p>
       
-</>
+
 
      
 
@@ -76,7 +76,7 @@ function ConditionalRendering() {
       </p>
       
 
-       <div className="bg-black-100  p-4 mb-3">
+       <div className="bg-black-100   mb-3">
       
 
        <div >
@@ -97,8 +97,151 @@ function ConditionalRendering() {
       </div>
 </div>
 
+<div >
+              <h2 className="text-2xl font-bold mb-4"> switch Statement:</h2>
+        </div>
+       < p className="mb-4">What is it</p>
+
+<p className="mb-4">
+          The {" "}
+          <code className="text-red-500">switch</code>statement is used to perform different 
+          actions based on different conditions, like
+          {" "}
+          <code className="text-red-500"> if / else if. </code> 
+        </p> 
+
+        <div >
+  <pre className="text-sm text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
+    <h1 className="text-2xl font-bold mb-4">Syntax:</h1>
+{`switch(expression) {
+  case value1:
+    // Code block
+    break;
+  case value2:
+    // Code block
+    break;
+  default:
+    // Code block (if no case matches)
+}
+`}
+  </pre>
+</div>
+
+<p className="mb-4 mt-5">
+           {" "}
+          <code className="text-red-500">expression</code> 
+         is compared to each 
+          {" "}
+          <code className="text-red-500"> case  </code> using strict comparison
+           {" "}
+          <code className="text-red-500"> (===)  </code> 
+        </p> 
+         <p className='mb-4'> 
+          {" "}
+          <code className="text-red-500"> default </code>  is like the
+           {" "}
+          <code className="text-red-500"> else  </code>  part of
+           {" "}
+          <code className="text-red-500"> if/else </code>  (optional)
+           
+        </p> 
+
+<div>
+  <h1 className="text-2xl font-bold mb-4 text-white">Syntax:</h1>
+  <pre className="text-sm text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
+{`let day = 2;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  default:
+    console.log("Another day");
+}`}
+  </pre>
+</div>
+
+< p className="mb-4 mt-4">When to Use switch</p>
+
+<p className="mb-4 mt-5">
+      When to Use ?
+     {" "}
+          <code className="text-red-500">switch</code> 
+         </p>
+         <h2 h2 className="mb-4 mt-4">When you have many values to compare</h2>
+<p className="mb-4 mt-3">
+      
+     Makes the code cleaner than many{" "}
+          <code className="text-red-500">if/else if</code> 
+         </p>
+
+<div className="rounded-xl mt-8">
+  <h1 className="text-2xl font-bold text-white mb-4">switch vs if/else - Summary Table:</h1>
+  <div className="overflow-x-auto">
+    <table className="w-full text-sm text-left text-gray-200 border border-gray-300">
+      <thead className="bg-green-600 text-white">
+        <tr>
+          <th className="px-3 py-2 border border-gray-300">Feature</th>
+          <th className="px-3 py-2 border border-gray-300">if / else</th>
+          <th className="px-3 py-2 border border-gray-300">switch</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Best for", "Complex conditions, ranges, expressions", "Many fixed value comparisons"],
+          ["Syntax", "More flexible (can use <, >, &&, etc.)", "Only compares strict equality (===)"],
+          ["Readability", "Becomes messy with many conditions", "Cleaner for multiple known values"],
+          ["Performance", "Slightly slower for many conditions", "Slightly faster (in some engines)"],
+          ["Use case", "Valid for all logic types", "Best for menu/options/select-type logic"],
+          ["Default case", "Uses final else", "Uses default"],
+          ["Break needed?", "❌ No need", "✅ Yes (to avoid fall-through)"],
+        ].map((row, index) => (
+          <tr
+            key={index}
+            className={index % 2 === 0 ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-800 hover:bg-gray-700"}
+          >
+            {row.map((cell, idx) => (
+              <td key={idx} className="px-3 py-2 border border-gray-300">
+                {cell}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div>
+ 
+  <pre className="text-sm text-white bg-black p-4 rounded-md font-mono overflow-x-auto">
+    <h1 className="text-2xl font-bold mb-4 mt-4 text-white">Example: switch:</h1>
+{`let fruit = "apple";
+
+switch (fruit) {
+  case "apple":
+    console.log("🍎 Apple selected");
+    break;
+  case "banana":
+    console.log("🍌 Banana selected");
+    break;
+  default:
+    console.log("❓ Unknown fruit");
+}
+`}
+  </pre>
+</div>
+
+
  <div >
-              <h2 className="text-2xl font-bold mb-4">Ternary Operator ? :</h2>
+              <h2 className="text-2xl font-bold mb-4 mt-3">Ternary Operator ? :</h2>
         </div>
        < p className="mb-4">What is it?</p>
   
@@ -186,6 +329,7 @@ function ConditionalRendering() {
         ))}
       </tbody>
     </table>
+
     <div className="flex justify-between mt-6">
         <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
           <span className="mr-2">❮</span> Previous
