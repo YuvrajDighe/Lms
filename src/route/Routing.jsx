@@ -28,6 +28,24 @@ import Memo from "../hookspages/UseMemo";
 import Reducer from "../hookspages/UseReducer";
 import Ref from "../hookspages/UseRef";
 import State from "../hookspages/UseState";
+import Debug from "../hookspages/UseDebug";
+import Layout from "../hookspages/UseLayout";
+import Imperative from "../hookspages/UseImperative";
+
+import Blur from "../reactevents/Blur";
+import Change from "../reactevents/Change";
+import Click from "../reactevents/Click";
+import DoubleClick from "../reactevents/DoubleClick";
+import Drag from "../reactevents/Drag";
+import Drop from "../reactevents/Drop";
+import Focus from "../reactevents/Focus";
+import KeyUp from "../reactevents/KeyUp";
+import KeyDown from "../reactevents/KeyDown";
+import MouseEnter from "../reactevents/MouseEnter";
+import MouseLeave from "../reactevents/MouseLeave";
+import OnInput from "../reactevents/OnInput";
+import Scroll from "../reactevents/Scroll";
+import Submit from "../reactevents/Submit";
 function Routing() {
   return (
     <Router>
@@ -62,6 +80,24 @@ function Routing() {
                     <Route path="Reducer" element={<Reducer />} />
                     <Route path="Callback" element={<Callback />} />
                     <Route path="Context" element={<Context />} />
+                    <Route path="Debug" element={<Debug />} />
+                    <Route path="Layout" element={< Layout/>} />
+                    <Route path="Imperative" element={< Imperative/>} />
+
+                    <Route path="Blur" element={<Blur />} />
+                    <Route path="Click" element={<Click />} />
+                    <Route path="Change" element={<Change />} />
+                    <Route path="DoubleClick" element={< DoubleClick/>} />
+                    <Route path="Submit" element={< Submit/>} />
+                    <Route path="Scroll" element={< Scroll/>} />
+                    <Route path="Focus" element={< Focus/>} />
+                    <Route path="KeyUp" element={< KeyUp/>} />
+                    <Route path="KeyDown" element={< KeyDown/>} />
+                    <Route path="Drag" element={< Drag/>} />
+                    <Route path="Drop" element={< Drop/>} />
+                    <Route path="MouseEnter" element={< MouseEnter/>} />
+                    <Route path="MouseLeave" element={< MouseLeave/>} />
+                    <Route path="OnInput" element={< OnInput/>} />
            {/* <Route path="ReactEs6" element={<ReactEs6 />} /> */}
          
             
