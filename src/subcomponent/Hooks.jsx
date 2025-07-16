@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 
 export default function Hooks() {
   return (
-    <div style={{ backgroundColor: "#464859", color: "white", padding: "20px", fontFamily: "Arial" }}>
+    <div className="p-9" style={{ backgroundColor: "#464859", color: "white", fontFamily: "Arial" }}>
       <h1 className="text-3xl font-bold mb-4">React Hooks</h1>
-    <div className="flex justify-between mt-6">
-          <Link
+      <div className="flex justify-between mt-6">
+        <Link
           to="/React/ReactClass"
-            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            <span className="mr-2">❮</span> Previous
-          </Link>
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          <span className="mr-2">❮</span> Previous
+        </Link>
 
-          <Link
-            to="/React/EventHandling"
-            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Next <span className="ml-2">❯</span>
-          </Link>
-        </div>
+        <Link
+          to="/React/EventHandling"
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          Next <span className="ml-2">❯</span>
+        </Link>
+      </div>
       <div className="mb-6">
         <p className="mb-2">
           Hooks were added in React 16.8. They let you use state and other features without writing a class.
@@ -34,17 +34,17 @@ export default function Hooks() {
         <p>
           A Hook is a special function in React that lets you "hook into" React features like state, lifecycle, and context from functional components. Hooks were introduced in React version 16.8 to make functional components more powerful, so they can do everything that class components can do — but with simpler and cleaner code.
 
-Before hooks, only class components could manage state or use lifecycle methods (like componentDidMount). But now, with hooks like useState, useEffect, useContext, etc., you can manage state, run side effects, access context, and more — directly inside a functional component. <code>useState</code> is a Hook that lets you add React state to function components.
+          Before hooks, only class components could manage state or use lifecycle methods (like componentDidMount). But now, with hooks like useState, useEffect, useContext, etc., you can manage state, run side effects, access context, and more — directly inside a functional component. <code>useState</code> is a Hook that lets you add React state to function components.
         </p>
       </div>
 
-       <div className="mb-6">
+      <div className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">Why Use Hooks ?</h2>
         <p>
           Hooks let you use state and lifecycle features in functional components,
-           which were earlier only available in class components. They make code cleaner,
-            shorter, and more reusable. With hooks, you can manage logic easily without using 
-            complex class syntax.
+          which were earlier only available in class components. They make code cleaner,
+          shorter, and more reusable. With hooks, you can manage logic easily without using
+          complex class syntax.
 
 
 
@@ -59,7 +59,7 @@ Before hooks, only class components could manage state or use lifecycle methods 
 
         <div className="bg-gray-900 text-white p-4 rounded overflow-auto text-sm">
           <pre>
-{`import React, { useState } from "react";
+            {`import React, { useState } from "react";
 
 function NameDisplay() {
   const [name, setName] = useState("");
@@ -124,20 +124,20 @@ export default NameDisplay;`}
         </p>
       </div>
       <div className="flex justify-between mt-6">
-          <Link
+        <Link
           to="/React/ReactClass"
-            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            <span className="mr-2">❮</span> Previous
-          </Link>
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          <span className="mr-2">❮</span> Previous
+        </Link>
 
-          <Link
-            to="/React/EventHandling"
-            className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Next <span className="ml-2">❯</span>
-          </Link>
-        </div>
+        <Link
+          to="/React/EventHandling"
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          Next <span className="ml-2">❯</span>
+        </Link>
+      </div>
     </div>
   );
 }
