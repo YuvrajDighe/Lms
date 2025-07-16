@@ -20,6 +20,7 @@ import Styling from "../subcomponent/Styling";
 import Redux from "../subcomponent/Redux";
 import BundlersBuild from "../subcomponent/BundlersBuild";
 import Miscellaneous from "../subcomponent/Miscellaneous";
+import ComponentRendering from "../subcomponent/ComponentRendering";
 
 import Callback from "../hookspages/UseCallback";
 import Context from "../hookspages/UseContext";
@@ -72,6 +73,7 @@ function Routing() {
                   <Route path="Redux" element={<Redux />} />
                     <Route path="BundlersBuild" element={<BundlersBuild />} />
                     <Route path="Miscellaneous" element={<Miscellaneous />} />
+ <Route path="ComponentRendering" element={<ComponentRendering />} />
 
                     <Route path="State" element={<State />} />
                     <Route path="Ref" element={<Ref />} />
