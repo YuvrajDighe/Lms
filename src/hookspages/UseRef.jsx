@@ -52,27 +52,27 @@ function FocusInput() {
       </div>
 
       {/* What is useRef */}
-      <h2 className="text-2xl font-semibold mb-4">What is useRef?</h2>
+      <h2 className="text-2xl font-bold mb-4">What is useRef?</h2>
       <p className="mb-4">
         <code>useRef</code> is a React hook used to create a reference to a DOM element or to store
         any mutable value that does not cause re-renders when changed.
       </p>
 
       {/* Syntax */}
-      <h2 className="text-xl font-semibold mb-2">🧠 Syntax:</h2>
+      <h2 className="text-2xl font-bold mb-4">🧠 Syntax:</h2>
       <pre className="bg-black p-4 rounded mb-6 overflow-x-auto">
         <code>const ref = useRef(initialValue);</code>
       </pre>
 
       {/* Why useRef */}
-      <h2 className="text-xl font-semibold mb-2">🔧 Why use useRef?</h2>
+      <h2 className="text-2xl font-bold mb-4">🔧 Why use useRef?</h2>
       <ul className="list-disc ml-6 mb-6 space-y-1">
         <li>Access DOM elements directly (like focus input)</li>
         <li>Store values that don’t need re-rendering</li>
         <li>Track previous state values</li>
         <li>Improve performance and avoid unnecessary re-renders</li>
       </ul>
-        <h2 className="text-xl font-semibold mb-2">🕒 When to use useRef?</h2>
+        <h2 className="text-2xl font-bold mb-4">🕒 When to use useRef?</h2>
       <ul className="list-disc ml-6 mb-6 space-y-1">
         <li>When you need to interact with DOM elements (e.g., focus, scroll, play media)</li>
         <li>When you want to keep a mutable value that doesn't trigger re-render</li>
@@ -81,7 +81,7 @@ function FocusInput() {
       </ul>
 
       {/* Rules */}
-      <h2 className="text-xl font-semibold mb-2">📌 Rules of useRef</h2>
+      <h2 className="text-2xl font-bold mb-4">📌 Rules of useRef</h2>
       <ul className="list-disc ml-6 mb-6 space-y-1">
         <li>Must be called inside a functional component</li>
         <li>Does not cause a re-render when updated</li>
@@ -105,7 +105,7 @@ function FocusInput() {
       </div>
 
       {/* Summary */}
-      <h2 className="text-xl font-semibold mb-2">📝 Summary</h2>
+      <h2 className="text-2xl font-bold mb-4">📝 Summary</h2>
       <ul className="list-disc ml-6 mb-6 space-y-1">
         <li><code>useRef</code> is perfect for storing values without triggering re-renders</li>
         <li>Useful for DOM access, timers, or persistent values</li>
