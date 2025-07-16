@@ -8,11 +8,11 @@ function Jsx() {
 
 
         <div className="flex justify-between mt-6">
-          <Link to="/React/EnvironmentSetup" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <Link to="/React/EnvironmentSetup" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-1 px-2 rounded">
             <span className="mr-2">❮</span> Previous
           </Link>
 
-          <Link to="/React/ReactComponent" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <Link to="/React/ReactComponent" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-1 px-2 rounded">
             Next <span className="ml-2">❯</span>
           </Link>
         </div>
@@ -91,7 +91,7 @@ function Jsx() {
       <strong>Wrap JSX in Parentheses:</strong> When returning JSX from functions (especially multi-line), wrap it in 
       <code className="text-red-600 font-bold">()</code> for better readability.
     </li>
-  </ul>
+  </ul>       
 </section>
 
 
@@ -256,11 +256,11 @@ root.render(myElement);`}
 
 
         <div className="flex justify-between mt-6">
-          <Link to="/React/EnvironmentSetup" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <Link to="/React/EnvironmentSetup" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-1 px-2 rounded">
             <span className="mr-2">❮</span> Previous
           </Link>
 
-          <Link to="/React/ReactComponent" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <Link to="/React/ReactComponent" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-1 px-2 rounded">
             Next <span className="ml-2">❯</span>
           </Link>
         </div>
@@ -273,4 +273,3 @@ root.render(myElement);`}
 }
 
 export default Jsx;
-
