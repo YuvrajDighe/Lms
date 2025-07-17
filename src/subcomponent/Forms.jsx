@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from "react-router-dom";
 function Forms() {
   const [formData, setFormData] = useState({
     username: '',
@@ -24,23 +24,23 @@ function Forms() {
 
   return (
     <div className="w-full p-6 font-sans min-h-screen bg-[#464859] text-white">
-      {/* Top Navigation */}
+      
      
 
-      {/* Header */}
+      
       <header className="mb-10">
         <h1 className="text-4xl font-bold mb-2">React Forms Guide</h1>
         <p className="text-gray-300">Learn how to create and manage forms in React</p>
       </header>
  <div className="flex justify-between mb-8">
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        <Link to="/React/ListsKeys" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
-        </button>
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        </Link>
+        <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           Next <span className="ml-2">❯</span>
-        </button>
+        </Link>
       </div>
-      {/* Basic Information Section (Top) */}
+     
       <section className="mb-10 bg-gray-700 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-4">HTML Forms Basics</h2>
         
@@ -80,9 +80,9 @@ function Forms() {
         </div>
       </section>
 
-      {/* Detailed Sections (Below) */}
+    
       
-      {/* 1. Controlled Components */}
+
       <section className="mb-10 bg-gray-700 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-4 flex items-center">
           <span className="inline-flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full mr-3">1</span>
@@ -117,7 +117,7 @@ function Forms() {
         </div>
       </section>
 
-      {/* 2. onChange & Value Binding */}
+
       <section className="mb-10 bg-gray-700 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-4 flex items-center">
           <span className="inline-flex items-center justify-center w-8 h-8 bg-green-500 rounded-full mr-3">2</span>
@@ -181,7 +181,7 @@ const handleChange = (e) => {
         </div>
       </section>
 
-      {/* 3. Form Submission */}
+      
       <section className="mb-10 bg-gray-700 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-4 flex items-center">
           <span className="inline-flex items-center justify-center w-8 h-8 bg-purple-500 rounded-full mr-3">3</span>
