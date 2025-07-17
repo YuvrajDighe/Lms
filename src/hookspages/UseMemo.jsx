@@ -48,7 +48,7 @@ function ExpensiveComponent({ num }) {
       {/* Navigation */}
       <div className="flex justify-between mt-6">
         <button
-          onClick={() => navigate("/React/Layout")}
+          onClick={() => navigate("/React/Effect")}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           <span className="mr-2">❮</span> Previous

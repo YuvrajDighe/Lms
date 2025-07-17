@@ -14,7 +14,7 @@ export default function Hooks() {
         </Link>
 
         <Link
-          to="/React/EventHandling"
+          to="/React/PropsIntro"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
@@ -132,7 +132,7 @@ export default NameDisplay;`}
         </Link>
 
         <Link
-          to="/React/EventHandling"
+          to="/React/PropsIntro"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>

@@ -45,7 +45,7 @@ function Debug() {
           <span className="mr-2">❮</span> Previous
         </Link>
         <Link
-          to="/React/Effect"
+          to="/React/Layout"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors"
         >
           Next <span className="ml-2">❯</span>
@@ -238,7 +238,7 @@ function subscribe(callback) {
           <span className="mr-2">❮</span> Previous
         </Link>
         <Link
-          to="/React/Effect"
+          to="/React/Layout"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors"
         >
           Next <span className="ml-2">❯</span>

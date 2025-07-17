@@ -30,7 +30,7 @@ function FocusInput() {
 }`;
 
   return (
-    <div className="min-h-screen bg-[#1e293b] text-white p-10 font-sans">
+    <div className="min-h-screen  text-white p-10 font-sans" style={{ backgroundColor: "#464859" }}>
       <h1 className="text-4xl font-bold mb-6">React useRef Hook</h1>
 
       {/* Navigation */}
@@ -43,7 +43,7 @@ function FocusInput() {
           Previous
         </Link>
         <Link
-          to="/React/useMemo"
+          to="/React/Effect"
           className="flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
         >
           Next
@@ -127,7 +127,7 @@ function FocusInput() {
           Previous
         </Link>
         <Link
-          to="/React/useMemo"
+          to="/React/Effect"
           className="flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
         >
           Next

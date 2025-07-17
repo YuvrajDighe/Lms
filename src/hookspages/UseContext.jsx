@@ -13,7 +13,7 @@ export default function UseContextPage() {
         </Link>
 
         <Link
-          to="/React/EventHandling"
+          to="/React/Debug"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
@@ -209,7 +209,7 @@ root.render(<Component1 />);`}
         </Link>
 
         <Link
-          to="/React/EventHandling"
+          to="/React/Debug"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
