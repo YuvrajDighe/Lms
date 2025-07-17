@@ -26,13 +26,13 @@ function ComponentRendering() {
 
        <div className="flex justify-between mt-6">
         <button
-          onClick={() => navigate('/React/useImperativeHandle')}
+          onClick={() => navigate('/React/ReactComponent')}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           <span className="mr-2">❮</span> Previous
         </button>
         <button
-          onClick={() => navigate('/React/useCallback')}
+          onClick={() => navigate('/React/StateManegment')}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
@@ -152,13 +152,13 @@ function ExampleComponent() {
       {/* Navigation */}
       <div className="flex justify-between mt-10">
         <button
-          onClick={() => navigate('/React/useImperativeHandle')}
+          onClick={() => navigate('/React/ReactComponent')}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           <span className="mr-2">❮</span> Previous
         </button>
         <button
-          onClick={() => navigate('/React/useCallback')}
+          onClick={() => navigate('/React/StateManegment')}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
