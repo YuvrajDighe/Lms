@@ -1,12 +1,16 @@
-export function ReactEs6() {
-  return (
-    <>
-    <h1>
+// src/component/ScrollToTop.jsx
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-        ReactEs6
-    </h1>
-    
-    </>
-  );
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Jab bhi pathname change hoga, scroll top pe jayega
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
-export default ReactEs6;
+
+export default ScrollToTop;

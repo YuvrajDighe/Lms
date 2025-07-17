@@ -35,11 +35,11 @@ function EventHandling() {
           <h1 className="text-[30px] font-bold mb-4">Handling Events in JSX</h1>
 
           <div className="flex justify-between mt-6">
-            <Link to="/React/Hooks" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+            <Link to="/React/Froms" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
               <span className="mr-2">❮</span> Previous
             </Link>
 
-            <Link to="/React/ConditionalRendering" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+            <Link to="/React/ReactRouter" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
               Next <span className="ml-2">❯</span>
             </Link>
           </div>
@@ -140,11 +140,12 @@ function EventHandling() {
           </p>
 
           <div className="flex justify-between mt-6">
-            <Link to="/React/Hooks" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+
+            <Link to="/React/Froms" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
               <span className="mr-2">❮</span> Previous
             </Link>
 
-            <Link to="/React/ConditionalRendering" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+            <Link to="/React/ReactRouter" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
               Next <span className="ml-2">❯</span>
             </Link>
           </div>

@@ -47,11 +47,13 @@ import MouseLeave from "../reactevents/MouseLeave";
 import OnInput from "../reactevents/OnInput";
 import Scroll from "../reactevents/Scroll";
 import Submit from "../reactevents/Submit";
+
+import ScrollToTop from "../subcomponent/ReactEs6";
 function Routing() {
   return (
     <Router>
       <Navbar />
-
+<ScrollToTop/>
       <Routes>
          {/* ✅ Redirect base path "/" to "/React" */}
         <Route path="/" element={<React />} />

@@ -32,7 +32,7 @@ function ReactRouter() {
         <h1 className="text-4xl font-bold text-white">React Router</h1>
 
         <div className="flex justify-between mt-6">
-          <Link to="/React/PropsIntro" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
             <span className="mr-2">❮</span> Previous
           </Link>
 
@@ -141,9 +141,8 @@ function Navbar() {
           </p>
         </div>
 
-        
-        <div className="flex justify-between mt-6">
-          <Link to="/React/PropsIntro" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+         <div className="flex justify-between mt-6">
+          <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
             <span className="mr-2">❮</span> Previous
           </Link>
 
