@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 function State() {
   const [copiedSyntax, setCopiedSyntax] = useState(false);
   const [copiedExample, setCopiedExample] = useState(false);
@@ -86,7 +86,23 @@ export default Toggle;`;
   return (
     <div className="text-white p-6" style={{ backgroundColor: "#464859" }}>
       <div>
-        <h1 className="text-[40px] mt-5">useState Hook :-</h1>
+        <h1 className="text-[40px] mt-5">useState Hook </h1>
+
+        <div className="flex justify-between mt-6">
+        <Link
+          to="/React/Hooks"
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          <span className="mr-2">❮</span> Previous
+        </Link>
+
+        <Link
+          to="/React/Ref"
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          Next <span className="ml-2">❯</span>
+        </Link>
+      </div>
         
         <h2 className="text-[25px] mt-5">What is useState?</h2>
         <p className="text-[18px] mt-2 ml-2">
@@ -220,6 +236,22 @@ export default Toggle;`;
       <p className="text-[18px] mt-2 ml-2">
         • useState is like a small memory box inside your component which stores data and lets you change it when needed.
       </p>
+      </div>
+
+            <div className="flex justify-between mt-6">
+        <Link
+          to="/React/Hooks"
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          <span className="mr-2">❮</span> Previous
+        </Link>
+
+        <Link
+          to="/React/Ref"
+          className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          Next <span className="ml-2">❯</span>
+        </Link>
       </div>
     </div>
   );

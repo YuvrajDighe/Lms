@@ -18,12 +18,12 @@ function Imperative() {
         >
           <span className="mr-2">❮</span> Previous
         </button>
-        {/* <button
-          onClick={() => navigate('/React/ComponentRendering')}
+        <button
+          onClick={() => navigate('/React/PropsIntro')}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
-        </button> */}
+        </button>
       </div>
 
       <h2 className="text-[30px] mt-6">✅ What is useImperativeHandle?</h2>

@@ -48,13 +48,13 @@ function LayoutExample() {
       {/* Navigation */}
       <div className="flex justify-between mt-6">
         <button
-          onClick={() => navigate("/React/UseState")}
+          onClick={() => navigate("/React/Debug")}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           <span className="mr-2">❮</span> Previous
         </button>
         <button
-          onClick={() => navigate("/React/UseMemo")}
+          onClick={() => navigate("/React/Imperative")}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           Next <span className="ml-2">❯</span>
