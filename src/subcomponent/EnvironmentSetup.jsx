@@ -75,92 +75,99 @@ function SetupBlock({ type, title, desc, code }) {
 }
 
 export default function EnvironmentSetup() {
-  const navigate = useNavigate(); // ✅ Fix: added this line
+  const navigate = useNavigate();
 
-  const topics = [
-    {
-      type: "Installation",
-      title: "Install Node.js and npm",
-      desc: `1. Visit https://nodejs.org
+ const topics = [
+  {
+    type: "Installation",
+    title: "Install Node.js and npm",
+    desc: `1. Visit https://nodejs.org
 2. Download the LTS version
 3. Install with default settings
 4. Open terminal and check version:`,
-      code: `node -v\nnpm -v`,
-    },
-    {
-      type: "Command",
-      title: "Create a React Project",
-      desc: `Create React App (CRA) helps to set up a ready-to-use React project with one command.
+    code: `node -v\nnpm -v`,
+  },
+  {
+    type: "Command",
+    title: "Create a Vite + React Project",
+    desc: `Vite is a modern build tool that sets up a React project quickly with lightning-fast dev server and optimized builds.
 
 Steps:
-1. Use npx to run CRA
+1. Use npm to initialize a Vite + React app
 2. Go to your project folder
-3. Start the dev server:`,
-      code: `npx create-react-app my-app\ncd my-app\nnpm start`,
-    },
-    {
-      type: "Command",
-      title: "Install Libraries with npm",
-      desc: `To use libraries in React, install them with npm. Example: Axios for API calls, Router for page navigation:`,
-      code: `npm install axios\nnpm install react-router-dom`,
-    },
-    {
-      type: "Concept",
-      title: "npm vs npx",
-      desc: `npm installs packages to your project. npx runs packages directly without installing globally.
+3. Install dependencies
+4. Start the development server:`,
+    code: `npm create vite@latest my-app -- --template react\ncd my-app\nnpm install\nnpm run dev`,
+  },
+  {
+    type: "Command",
+    title: "Install Libraries with npm",
+    desc: `To use libraries in React, install them with npm. Example: Axios for API calls, Router for page navigation:`,
+    code: `npm install axios\nnpm install react-router-dom`,
+  },
+  {
+    type: "Concept",
+    title: "npm vs npx",
+    desc: `npm installs packages to your project. npx runs packages directly without installing globally.
 
 Examples:
-- npm install create-react-app (installs it)
-- npx create-react-app my-app (runs it directly)`,
-      code: `npm install create-react-app\nnpx create-react-app my-app`,
-    },
-    {
-      type: "Run",
-      title: "Run the React App",
-      desc: `Start the development server and open the project in the browser. Default URL: http://localhost:3000`,
-      code: `cd my-app\nnpm start`,
-    },
-    {
-      type: "Folder Structure",
-      title: "CRA Project Structure Explained",
-      desc: `my-app/
+- npm install vite (installs it)
+- npm create vite@latest my-app (runs Vite scaffolding directly)`,
+    code: `npm install vite\nnpm create vite@latest my-app`,
+  },
+  {
+    type: "Run",
+    title: "Run the React App (Vite)",
+    desc: `Start the Vite development server and open the project in the browser. Default URL: http://localhost:5173`,
+    code: `cd my-app\nnpm run dev`,
+  },
+  {
+    type: "Folder Structure",
+    title: "Vite Project Structure Explained",
+    desc: `my-app/
 │
 ├── node_modules/        → All installed libraries
 │
-├── public/              → Public files (index.html, favicon)
-│   └── index.html       → Root HTML file where React renders
+├── public/              → Public files (static assets)
 │
 ├── src/                 → All React code here
-│   ├── App.js           → Main App component
-│   ├── index.js         → Starting point (entry file)
+│   ├── App.jsx          → Main App component
+│   ├── main.jsx         → Entry point for React
 │   └── ...              → Other components/files
 │
+├── index.html           → Root HTML template
 ├── package.json         → Project info + dependencies
-├── .gitignore           → Files to ignore in Git
+├── vite.config.js       → Vite configuration file
 └── README.md            → Project description`,
-    },
-    {
-      type: "File",
-      title: "package.json Overview",
-      desc: `This file holds info about your React project:
+  },
+  {
+    type: "File",
+    title: "package.json Overview",
+    desc: `This file holds info about your Vite + React project:
 - Project name/version
 - Dependencies
-- Scripts (start, build, test)
+- Scripts (dev, build, preview)
 
 Here's an example:`,
-      code: `{
+    code: `{
   "name": "my-app",
   "version": "1.0.0",
-  "dependencies": {
-    "react": "^18.2.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
   }
 }`,
-    },
-  ];
+  },
+];
+
 
   return (
     <div className="min-h-screen bg-[#464859] px-4 sm:px-9 py-6">
@@ -193,7 +200,7 @@ Here's an example:`,
             code={item.code}
           />
         ))}
-         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 mt-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 mt-6">
           <button
             onClick={() => navigate("/React/ReactIntro")}
             className="w-full sm:w-auto flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
@@ -211,3 +218,4 @@ Here's an example:`,
     </div>
   );
 }
+
