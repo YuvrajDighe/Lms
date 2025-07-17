@@ -37,10 +37,10 @@ export function ReactProp() {
       <div className="flex-1 p-6 text-white overflow-auto " style={{ backgroundColor: "#464859",minHeight:"100vh"}}>
         <h1 className="text-3xl font-bold">React Props</h1><br />
         <div className="flex justify-between mb-6">
-          <Link to="/React/Froms" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
+          <Link to="/React/Hooks" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
             <ChevronLeft className="w-4 h-4 mr-1" /> Previous
           </Link>
-          <Link to="/React/ReactRouter" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
+          <Link to="/React/ConditionalRendering" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
             Next <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
@@ -185,11 +185,11 @@ export default App;
 
     </div>
     
- <div className="flex justify-between mt-7">
-          <Link to="/React/Froms" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
+    <div className="flex justify-between mb-6">
+          <Link to="/React/Hooks" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
             <ChevronLeft className="w-4 h-4 mr-1" /> Previous
           </Link>
-          <Link to="/React/ReactRouter" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
+          <Link to="/React/ConditionalRendering" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
             Next <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function StylingGuide() {
   return (
     <div className="w-full p-6 font-sans min-h-screen bg-[#464859] text-white">
@@ -12,12 +12,12 @@ function StylingGuide() {
         <p className="text-gray-300">Learn different ways to style your React components</p>
       </header>
        <div className="flex justify-between mb-8">
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        <Link to="/React/ReactRouter"className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
-        </button>
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        </Link>
+        <Link to="/React/Redux" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           Next <span className="ml-2">❯</span>
-        </button>
+        </Link>
       </div>
 
       {/* Inline CSS Section */}
@@ -287,13 +287,13 @@ const Button = styled.button\`
 </section>
 
       {/* Bottom Navigation */}
-      <div className="flex justify-between mt-8">
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        <div className="flex justify-between mb-8">
+        <Link to="/React/ReactRouter"className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
-        </button>
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        </Link>
+        <Link to="/React/Redux" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           Next <span className="ml-2">❯</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
