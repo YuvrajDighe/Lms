@@ -11,7 +11,7 @@ export function ReactComponent() {
               <span className="mr-2">❮</span> Previous
             </Link>
 
-            <Link to="/React/StateManegment" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+            <Link to="/React/ComponentRendering" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
               Next <span className="ml-2">❯</span>
             </Link>
           </div>
@@ -176,7 +176,7 @@ export default Welcome;`}
               <span className="mr-2">❮</span> Previous
             </Link>
 
-            <Link to="/React/StateManegment" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+            <Link to="/React/ComponentRendering" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
               Next <span className="ml-2">❯</span>
             </Link>
           </div>
