@@ -22,7 +22,7 @@ function ComponentRendering() {
   return (
     <div className="p-9 text-white" style={{ backgroundColor: '#464859' }}>
 
-      <h1 className="text-[40px] mb-6">Component Rendering in React</h1>
+      <h1 className="text-4xl mb-6">Component Rendering in React</h1>
 
        <div className="flex justify-between mt-6">
         <button

@@ -4,7 +4,7 @@ function Jsx() {
   return (
     <div className="p-9 bg-[#464859] text-white text-lg">
       <div className="max-w-4x4">
-        <h1 className="text-[40px]">React JSX</h1>
+        <h1 className="text-4xl font-bold">React JSX</h1>
 
 
         <div className="flex justify-between mt-6">

@@ -170,9 +170,9 @@ Here's an example:`,
 
 
   return (
-    <div className="min-h-screen bg-[#464859] px-4 sm:px-9 py-6">
+    <div className="min-h-screen bg-[#464859]  sm:px-9 p-9">
       <div className="max-w-screen-xl mx-auto">
-        <h1 className="text-2xl sm:text-4xl font-bold text-white pb-6 text-center sm:text-left">
+        <h1 className="text-4xl sm:text-4xl font-bold text-white pb-6 text-center sm:text-left">
           React Environment Setup
         </h1>
 

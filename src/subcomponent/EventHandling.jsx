@@ -31,8 +31,8 @@ function EventHandling() {
   return (
     <>
       <div>
-        <div className=" text-white p-6 " style={{ backgroundColor: "#464859" }}>
-          <h1 className="text-[30px] font-bold mb-4">Handling Events in JSX</h1>
+        <div className=" text-white p-9 " style={{ backgroundColor: "#464859" }}>
+          <h1 className="text-4xl font-bold ">Handling Events in JSX</h1>
 
           <div className="flex justify-between mt-6">
             <Link to="/React/Froms" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">

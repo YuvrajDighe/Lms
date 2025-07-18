@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 function StylingGuide() {
   return (
-    <div className="w-full p-6 font-sans min-h-screen bg-[#464859] text-white">
+    <div className="w-full p-9 font-sans min-h-screen bg-[#464859] text-white">
       {/* Top Navigation */}
      
 
       {/* Header */}
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold mb-2">React Styling Guide</h1>
+      <header >
+        <h1 className="text-4xl font-bold ">React Styling Guide</h1>
         <p className="text-gray-300">Learn different ways to style your React components</p>
       </header>
-       <div className="flex justify-between mb-8">
+       <div className="flex justify-between mt-6 mb-8">
         <Link to="/React/ReactRouter"className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
         </Link>
