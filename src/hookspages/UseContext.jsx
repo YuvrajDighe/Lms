@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 export default function UseContextPage() {
   return (
     <div className="p-9" style={{ backgroundColor: "#464859", color: "white",  fontFamily: "Arial" }}>
-      <h1 className="text-3xl font-bold mb-4">React useContext Hook</h1>
+      <h1 className="text-4xl font-bold ">React useContext Hook</h1>
 
-    <div className="flex justify-between mt-6">
+    <div className="flex justify-between mb-6    mt-6">
         <Link
           to="/React/Callback"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"

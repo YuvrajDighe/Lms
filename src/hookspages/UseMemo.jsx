@@ -43,7 +43,7 @@ function ExpensiveComponent({ num }) {
 
   return (
     <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
-      <h1 className="text-[40px]">useMemo in React</h1>
+      <h1 className="text-4xl font-bold">useMemo in React</h1>
 
       {/* Navigation */}
       <div className="flex justify-between mt-6">

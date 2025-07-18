@@ -9,9 +9,9 @@ function StylingGuide() {
       {/* Header */}
       <header >
         <h1 className="text-4xl font-bold ">React Styling Guide</h1>
-        <p className="text-gray-300">Learn different ways to style your React components</p>
+     
       </header>
-       <div className="flex justify-between mt-6 mb-8">
+       <div className="flex justify-between mt-6 mb-6">
         <Link to="/React/ReactRouter"className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
         </Link>

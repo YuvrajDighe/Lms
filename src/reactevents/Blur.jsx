@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Blur() {
   return (
     <div className="p-9 bg-[#464859] text-white min-h-screen">
-      <h1 className="text-4xl font-bold mb-4">onBlur Event in React</h1>
+      <h1 className="text-4xl font-bold ">onBlur Event in React</h1>
 
       {/* Navigation */}
       <div className="flex justify-between mt-6">

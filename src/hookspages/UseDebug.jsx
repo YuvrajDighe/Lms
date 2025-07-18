@@ -31,13 +31,11 @@ function Debug() {
       
 
       {/* Header */}
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold mb-2">useDebugValue Hook</h1>
-        <p className="text-gray-300">
-          Add labels to custom hooks in React DevTools for better debugging
-        </p>
+      <header>
+        <h1 className="text-4xl font-bold">useDebugValue Hook</h1>
+      
       </header>
-      <div className="flex justify-between mb-8">
+      <div className="flex justify-between mt-6 mb-6">
          <Link
           to="/React/Context"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors"
