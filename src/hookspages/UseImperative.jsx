@@ -9,7 +9,7 @@ function Imperative() {
       {/* Navigation Top */}
      
 
-      <h1 className="text-[40px] mb-6">useImperativeHandle in React – Notes</h1>
+      <h1 className="text-4xl font-bold mb-6">useImperativeHandle </h1>
 
        <div className="flex justify-between mb-6">
         <button

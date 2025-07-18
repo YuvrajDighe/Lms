@@ -84,9 +84,9 @@ export default Toggle;`;
   }
 
   return (
-    <div className="text-white p-6" style={{ backgroundColor: "#464859" }}>
+    <div className="text-white p-9" style={{ backgroundColor: "#464859" }}>
       <div>
-        <h1 className="text-[40px] mt-5">useState Hook </h1>
+        <h1 className="text-4xl">useState Hook </h1>
 
         <div className="flex justify-between mt-6">
         <Link

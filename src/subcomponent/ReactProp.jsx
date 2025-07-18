@@ -45,7 +45,7 @@ export function ReactProp() {
           </Link>
         </div>
 
-        <div className="border-b-2 border"></div>
+      
 
         <p className="mt-4 text-lg">
           Props are arguments passed into React components.Props are passed to components via HTML attributes.

@@ -29,8 +29,8 @@ function Forms() {
 
       
       <header >
-        <h1 className="text-4xl font-bold mb-2">React Forms Guide</h1>
-        <p className="text-gray-300">Learn how to create and manage forms in React</p>
+        <h1 className="text-4xl font-bold ">React Forms Guide</h1>
+        
       </header>
  <div className="flex justify-between mt-6 mb-6">
         <Link to="/React/ListsKeys" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">

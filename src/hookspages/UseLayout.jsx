@@ -43,7 +43,7 @@ function LayoutExample() {
 
   return (
     <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
-      <h1 className="text-[40px]">useLayoutEffect in React</h1>
+      <h1 className="text-4xl font-bold">useLayoutEffect in React</h1>
 
       {/* Navigation */}
       <div className="flex justify-between mt-6">

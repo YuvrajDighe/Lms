@@ -42,7 +42,7 @@ export default Counter;`;
   return (
     <div className="p-9 bg-[#464859] text-white text-lg">
       <div className="max-w-4x4">
-        <h1 className="text-[40px] font-bold mb-6">React <span className="text-red-400">useReducer</span> Hook</h1>
+        <h1 className="text-4xl font-bold mb-6">React <span className="text-red-400">useReducer</span> Hook</h1>
 
         {/* NAV BUTTONS */}
         <div className="flex justify-between mt-6 mb-10">

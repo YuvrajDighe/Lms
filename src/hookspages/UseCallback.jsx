@@ -4,8 +4,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
  function Callback() {
   return (
     <>
-    <div className="flex-1 p-6 text-white overflow-auto " style={{ backgroundColor: "#464859",minHeight:"100vh"}}>
-    <h1 className="text-3xl">React <span className="text-red-500">useCallback</span> Hook</h1>
+    <div className="flex-1 p-9 text-white overflow-auto " style={{ backgroundColor: "#464859",minHeight:"100vh"}}>
+    <h1 className="text-4xl font-bold">React useCallback Hook</h1>
     <div className="flex justify-between mt-6">
           <Link to="/React/Reducer" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
             <ChevronLeft className="w-4 h-4 mr-1" /> Previous
