@@ -6,7 +6,7 @@ export function BundlersBuild() {
     <div className="p-9 bg-[#464859] text-white text-lg">
 
       <div className="max-w-4x4">
-        <h1 className="text-[40px] ">Bundlers & Build Tools</h1>
+        <h1 className="text-4xl font-bold ">Bundlers & Build Tools</h1>
       
 
         {/* NAV BUTTONS */}

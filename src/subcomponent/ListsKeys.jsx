@@ -43,9 +43,9 @@ function Garage() {
 }`;
 
   return (
-    <div className="min-h-screen p-10 bg-[#464859] text-white font-sans">
+    <div className="min-h-screen p-9 bg-[#464859] text-white font-sans">
       {/* Page Title */}
-      <h1 className="text-4xl font-bold mb-4">Lists and Keys</h1>
+      <h1 className="text-4xl font-bold mb-6">Lists and Keys</h1>
 
       {/* Top Navigation Buttons */}
       <div className="flex justify-between items-center mb-6">

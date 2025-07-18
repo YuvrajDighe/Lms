@@ -56,7 +56,7 @@ const handleClick = useCallback(() => {
  
   return (
     <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
-      <h1 className="text-[40px]">Miscellaneous React Concepts</h1>
+      <h1 className="text-4xl">Miscellaneous React Concepts</h1>
  
       {/* Navigation */}
       <div className="flex justify-between mt-6">

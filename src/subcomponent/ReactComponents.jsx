@@ -3,7 +3,7 @@ export function ReactComponent() {
   return (
     <div className="p-9 text-white" style={{ backgroundColor: "#464859" }}>
       {/* Top Heading */}
-      <h1 className="text-[40px]">React Components</h1>
+      <h1 className="text-4xl font-bold">React Components</h1>
 
       {/* Buttons */}
        <div className="flex justify-between mt-6">

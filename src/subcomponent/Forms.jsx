@@ -23,16 +23,16 @@ function Forms() {
   };
 
   return (
-    <div className="w-full p-6 font-sans min-h-screen bg-[#464859] text-white">
+    <div className="w-full p-9 font-sans min-h-screen bg-[#464859] text-white">
       
      
 
       
-      <header className="mb-10">
+      <header >
         <h1 className="text-4xl font-bold mb-2">React Forms Guide</h1>
         <p className="text-gray-300">Learn how to create and manage forms in React</p>
       </header>
- <div className="flex justify-between mb-8">
+ <div className="flex justify-between mt-6 mb-6">
         <Link to="/React/ListsKeys" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
         </Link>
