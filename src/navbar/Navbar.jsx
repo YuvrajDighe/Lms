@@ -19,7 +19,7 @@ function Navbar() {
             className="h-10 w-auto object-contain"
           />
           <span className="text-xl font-bold text-white whitespace-nowrap">
-            My Logo
+            Baap LMS 
           </span>
         </div>
 
