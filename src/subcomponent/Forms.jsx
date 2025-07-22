@@ -300,13 +300,13 @@ const handleChange = (e) => {
       </section>
 
       {/* Bottom Navigation */}
-      <div className="flex justify-between mt-8">
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+     <div className="flex justify-between mt-6 mb-6">
+        <Link to="/React/ListsKeys" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           <span className="mr-2">❮</span> Previous
-        </button>
-        <button className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+        </Link>
+        <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
           Next <span className="ml-2">❯</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
