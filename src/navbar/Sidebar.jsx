@@ -1,5 +1,23 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import {
+  FaReact,
+  FaCogs,
+  FaPuzzlePiece,
+  FaRegObjectGroup,
+  FaRegPlayCircle,
+  FaBolt,
+  FaSyncAlt,
+  FaLink,
+  FaListAlt,
+  FaWpforms,
+  FaRoute,
+  FaPaintBrush,
+  FaDatabase,
+  FaBoxOpen,
+  FaBookOpen,
+} from "react-icons/fa";
 
 function Sidebar() {
   const location = useLocation();
@@ -8,21 +26,18 @@ function Sidebar() {
   const [showHooksDropdown, setShowHooksDropdown] = useState(false);
   const [showEventsDropdown, setShowEventsDropdown] = useState(false);
 
-  // Auto open dropdowns if inside their respective routes
   useEffect(() => {
-    if (location.pathname.startsWith("/React/Hooks")) {
-      setShowHooksDropdown(true);
-    }
-    if (location.pathname.startsWith("/React/EventHandling")) {
-      setShowEventsDropdown(true);
-    }
+    if (location.pathname.startsWith("/React/Hooks")) setShowHooksDropdown(true);
+    if (location.pathname.startsWith("/React/EventHandling")) setShowEventsDropdown(true);
   }, [location.pathname]);
 
-  const linkClass =
-    "block w-full py-2 rounded transition-colors duration-200";
-
   const getLinkClass = ({ isActive }) =>
-    `${linkClass} ${isActive ? "bg-gray-600" : "hover:bg-gray-600"}`;
+    `flex items-center gap-2 w-full py-2 px-3 rounded transition-all duration-200 ${
+      isActive ? "bg-[#5c5f78] text-white" : "hover:bg-[#525466]"
+    }`;
+
+  const dropdownIcon = (isOpen) =>
+    isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />;
 
   const handleHooksClick = (e) => {
     e.preventDefault();
@@ -37,195 +52,166 @@ function Sidebar() {
   };
 
   return (
-    <aside
-      className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-60 shadow-md z-40 overflow-y-auto text-white font-bold text-[15px] leading-[20px] tracking-[0.36px] scrollbar-hide"
-      style={{
-        backgroundColor: "#3A3A4B",
-        fontFamily: "'Afacad Flux', sans-serif",
-        scrollbarWidth: "none",
-        msOverflowStyle: "none",
-      }}
-    >
-      <div className="p-6 space-y-2">
-        <NavLink to="/React/ReactIntro" className={getLinkClass}>
-          Introduction
-        </NavLink>
-        <NavLink to="/React/EnvironmentSetup" className={getLinkClass}>
-          Environment Setup
-        </NavLink>
-        <NavLink to="/React/Jsx" className={getLinkClass}>
-          JSX (JavaScript XML)
-        </NavLink>
-        <NavLink to="/React/ReactComponent" className={getLinkClass}>
-          React Component
-        </NavLink>
-         <NavLink to="/React/ComponentRendering" className={getLinkClass}>
-         ComponentRendering
-        </NavLink>
-        <NavLink to="/React/StateManegment" className={getLinkClass}>
-          State Management
-        </NavLink>
-        <NavLink to="/React/ReactClass" className={getLinkClass}>
-          React Lifecycle (Class)
-        </NavLink>
+    <>
+      <aside
+        className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-[#3A3A4B] text-white shadow-xl overflow-y-auto z-40 font-medium"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
+        <style>{`
+          aside::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
 
-        {/* 🔽 Hooks Dropdown */}
-        <div
-          className="relative"
-          onMouseEnter={() => setShowHooksDropdown(true)}
-          onMouseLeave={() => setShowHooksDropdown(false)}
-        >
-          <NavLink
-            to="/React/Hooks"
-            onClick={handleHooksClick}
-            className={({ isActive }) =>
-              `${linkClass} w-full text-left ${
-                showHooksDropdown || isActive
-                  ? "bg-gray-600"
-                  : "hover:bg-gray-600"
-              }`
-            }
-          >
-            Hooks {showHooksDropdown ? "🔼" : "🔽"}
-          </NavLink>
-
-          {showHooksDropdown && (
-            <div className="pl-4 space-y-1">
-              <NavLink to="/React/State" className={getLinkClass}>
-                useState
-              </NavLink>
-              <NavLink to="/React/Ref" className={getLinkClass}>
-                useRef
-              </NavLink>
-              <NavLink to="/React/Effect" className={getLinkClass}>
-                useEffect
-              </NavLink>
-              <NavLink to="/React/Memo" className={getLinkClass}>
-                useMemo
-              </NavLink>
-              <NavLink to="/React/Reducer" className={getLinkClass}>
-                useReducer
-              </NavLink>
-              <NavLink to="/React/Callback" className={getLinkClass}>
-                useCallback
-              </NavLink>
-              <NavLink to="/React/Context" className={getLinkClass}>
-                useContext
-              </NavLink>
-              <NavLink to="/React/Debug" className={getLinkClass}>
-                useDebugValue
-              </NavLink>
-              <NavLink to="/React/Layout" className={getLinkClass}>
-                useLayoutEffect
-              </NavLink>
-              <NavLink to="/React/Imperative" className={getLinkClass}>
-                useImperativeHandle
-              </NavLink>
-            </div>
-          )}
+        <div className="px-5 pt-4 pb-2 text-xl font-bold border-b border-gray-600">
+          React Tutorial
         </div>
 
-        <NavLink to="/React/PropsIntro" className={getLinkClass}>
-          Data Binding (Props)
-        </NavLink>
-
-        {/* Other Links */}
-        <NavLink to="/React/ConditionalRendering" className={getLinkClass}>
-          Conditional Rendering
-        </NavLink>
-        <NavLink to="/React/ListsKeys" className={getLinkClass}>
-          Lists and Keys
-        </NavLink>
-        <NavLink to="/React/Froms" className={getLinkClass}>
-          Forms
-        </NavLink>
-       
-
-         {/* 🔽 Events Dropdown */}
-        <div
-          className="relative"
-          onMouseEnter={() => setShowEventsDropdown(true)}
-          onMouseLeave={() => setShowEventsDropdown(false)}
-        >
-          <NavLink
-            to="/React/EventHandling"
-            onClick={handleEventsClick}
-            className={({ isActive }) =>
-              `${linkClass} w-full text-left ${
-                showEventsDropdown || isActive
-                  ? "bg-gray-600"
-                  : "hover:bg-gray-600"
-              }`
-            }
-          >
-            Events {showEventsDropdown ? "🔼" : "🔽"}
+        <div className="px-4 pt-4 space-y-1 text-[15px]">
+          <NavLink to="/React/ReactIntro" className={getLinkClass}>
+            <FaReact /> Introduction
+          </NavLink>
+          <NavLink to="/React/EnvironmentSetup" className={getLinkClass}>
+            <FaCogs /> Environment Setup
+          </NavLink>
+          <NavLink to="/React/Jsx" className={getLinkClass}>
+            <FaPuzzlePiece /> JSX
+          </NavLink>
+          <NavLink to="/React/ReactComponent" className={getLinkClass}>
+            <FaRegObjectGroup /> Components
+          </NavLink>
+          <NavLink to="/React/ComponentRendering" className={getLinkClass}>
+            <FaRegPlayCircle /> Rendering
+          </NavLink>
+          <NavLink to="/React/StateManegment" className={getLinkClass}>
+            <FaBolt /> State Management
+          </NavLink>
+          <NavLink to="/React/ReactClass" className={getLinkClass}>
+            <FaSyncAlt /> Lifecycle (Class)
           </NavLink>
 
-          {showEventsDropdown && (
-            <div className="pl-4 space-y-1">
-              <NavLink to="/React/Click" className={getLinkClass}>
-                onClick
-              </NavLink>
-              <NavLink to="/React/Change" className={getLinkClass}>
-                onChange
-              </NavLink>
-              <NavLink to="/React/Submit" className={getLinkClass}>
-                onSubmit
-              </NavLink>
-              <NavLink to="/React/Blur" className={getLinkClass}>
-                onBlur
-              </NavLink>
-              <NavLink to="/React/Scroll" className={getLinkClass}>
-                onScroll
-              </NavLink>
-              <NavLink to="/React/Focus" className={getLinkClass}>
-                onFocus
-              </NavLink>
-              <NavLink to="/React/KeyUp" className={getLinkClass}>
-                onKeyUp
-              </NavLink>
-             
-              <NavLink to="/React/KeyDown" className={getLinkClass}>
-                onKeyDown
-              </NavLink>
-              <NavLink to="/React/DoubleClick" className={getLinkClass}>
-                onDoubleClick
-              </NavLink>
-              <NavLink to="/React/OnInput" className={getLinkClass}>
-               OnInput
-              </NavLink>
-              <NavLink to="/React/Drag" className={getLinkClass}>
-                onDrag
-              </NavLink>
-              <NavLink to="/React/Drop" className={getLinkClass}>
-                onDrop
-              </NavLink>
-              <NavLink to="/React/MouseEnter" className={getLinkClass}>
-                onMouseEnter
-              </NavLink>
-              <NavLink to="/React/MouseLeave" className={getLinkClass}>
-                onMouseLeave
-              </NavLink>
-            </div>
-          )}
+          {/* 🔽 Hooks Dropdown */}
+          <div
+            onMouseEnter={() => setShowHooksDropdown(true)}
+            onMouseLeave={() => setShowHooksDropdown(false)}
+          >
+            <NavLink
+              to="/React/Hooks"
+              onClick={handleHooksClick}
+              className={({ isActive }) =>
+                `flex justify-between items-center w-full px-3 py-2 rounded ${
+                  showHooksDropdown || isActive ? "bg-[#5c5f78]" : "hover:bg-[#525466]"
+                }`
+              }
+            >
+              <span className="flex items-center gap-2">
+                <FaBookOpen /> Hooks
+              </span>
+              {dropdownIcon(showHooksDropdown)}
+            </NavLink>
+
+            {showHooksDropdown && (
+              <div className="pl-4 mt-1 space-y-1">
+                {[
+                  ["State", "useState"],
+                  ["Ref", "useRef"],
+                  ["Effect", "useEffect"],
+                  ["Memo", "useMemo"],
+                  ["Reducer", "useReducer"],
+                  ["Callback", "useCallback"],
+                  ["Context", "useContext"],
+                  ["Debug", "useDebugValue"],
+                  ["Layout", "useLayoutEffect"],
+                  ["Imperative", "useImperativeHandle"],
+                ].map(([path, label]) => (
+                  <NavLink key={path} to={`/React/${path}`} className={getLinkClass}>
+                    {label}
+                  </NavLink>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <NavLink to="/React/PropsIntro" className={getLinkClass}>
+            <FaLink /> Props (Data Binding)
+          </NavLink>
+          <NavLink to="/React/ConditionalRendering" className={getLinkClass}>
+            <FaBookOpen /> Conditional Rendering
+          </NavLink>
+          <NavLink to="/React/ListsKeys" className={getLinkClass}>
+            <FaListAlt /> Lists & Keys
+          </NavLink>
+          <NavLink to="/React/Froms" className={getLinkClass}>
+            <FaWpforms /> Forms
+          </NavLink>
+
+          {/* 🔽 Events Dropdown */}
+          <div
+            onMouseEnter={() => setShowEventsDropdown(true)}
+            onMouseLeave={() => setShowEventsDropdown(false)}
+          >
+            <NavLink
+              to="/React/EventHandling"
+              onClick={handleEventsClick}
+              className={({ isActive }) =>
+                `flex justify-between items-center w-full px-3 py-2 rounded ${
+                  showEventsDropdown || isActive ? "bg-[#5c5f78]" : "hover:bg-[#525466]"
+                }`
+              }
+            >
+              <span className="flex items-center gap-2">
+                <FaCogs /> Events
+              </span>
+              {dropdownIcon(showEventsDropdown)}
+            </NavLink>
+
+            {showEventsDropdown && (
+              <div className="pl-4 mt-1 space-y-1">
+                {[
+                  "Click",
+                  "Change",
+                  "Submit",
+                  "Blur",
+                  "Scroll",
+                  "Focus",
+                  "KeyUp",
+                  "KeyDown",
+                  "DoubleClick",
+                  "OnInput",
+                  "Drag",
+                  "Drop",
+                  "MouseEnter",
+                  "MouseLeave",
+                ].map((evt) => (
+                  <NavLink key={evt} to={`/React/${evt}`} className={getLinkClass}>
+                    {evt}
+                  </NavLink>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <NavLink to="/React/ReactRouter" className={getLinkClass}>
+            <FaRoute /> React Router
+          </NavLink>
+          <NavLink to="/React/Styling" className={getLinkClass}>
+            <FaPaintBrush /> Styling
+          </NavLink>
+          <NavLink to="/React/Redux" className={getLinkClass}>
+            <FaDatabase /> Redux
+          </NavLink>
+          <NavLink to="/React/BundlersBuild" className={getLinkClass}>
+            <FaBoxOpen /> Bundlers & Build
+          </NavLink>
+          <NavLink to="/React/Miscellaneous" className={getLinkClass}>
+            <FaBookOpen /> Misc & Best Practices
+          </NavLink>
         </div>
-        <NavLink to="/React/ReactRouter" className={getLinkClass}>
-          React Router
-        </NavLink>
-        <NavLink to="/React/Styling" className={getLinkClass}>
-          Styling in React
-        </NavLink>
-        <NavLink to="/React/Redux" className={getLinkClass}>
-          Redux & State Management
-        </NavLink>
-        <NavLink to="/React/BundlersBuild" className={getLinkClass}>
-          Bundlers & Build Tools
-        </NavLink>
-        <NavLink to="/React/Miscellaneous" className={getLinkClass}>
-          Miscellaneous & Best Practices
-        </NavLink>
-      </div>
-    </aside>
+      </aside>
+    </>
   );
 }
 
