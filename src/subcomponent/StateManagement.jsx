@@ -92,7 +92,7 @@ function NameDisplay({ name }) {
 
       <div className="flex justify-between mt-6">
         <button
-          onClick={() => navigate("/React/ReactComponent")}
+          onClick={() => navigate("/React/ComponentRendering")}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           <span className="mr-2">❮</span> Previous
@@ -136,7 +136,7 @@ function NameDisplay({ name }) {
 
       <div className="flex justify-between mt-10">
         <button
-          onClick={() => navigate("/React/ReactComponent")}
+          onClick={() => navigate("/React/ComponentRendering")}
           className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
         >
           <span className="mr-2">❮</span> Previous

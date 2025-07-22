@@ -8,7 +8,7 @@ function ConditionalRendering() {
 <h1 className="text-4xl font-bold text-white"> ConditionalRendering</h1>
 
 <div className="flex justify-between mt-6">
-        <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+        <Link to="/React/PropsIntro" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
           <span className="mr-2">❮</span> Previous
         </Link>
  
@@ -331,7 +331,7 @@ switch (fruit) {
     </table>
 
     <div className="flex justify-between mt-6">
-        <Link to="/React/EventHandling" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+        <Link to="/React/PropsIntro" className="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
           <span className="mr-2">❮</span> Previous
         </Link>
  
