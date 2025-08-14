@@ -248,6 +248,7 @@ root.render(myElement);`}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);`}
+
             </pre>
           </div>
         </section>
