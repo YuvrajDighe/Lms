@@ -1,5 +1,6 @@
 import viteLogo from "/vite.svg";
 import reactLogo from "../assets/react.svg";
+import { NavLink, Link } from "react-router-dom";
 
 function React() {
   return (
@@ -26,12 +27,11 @@ function React() {
         />
       </div>
 
-      <a
-        href="/React/ReactIntro"
+      <NavLink to="/React/ReactIntro"
         className="bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded font-semibold text-lg shadow-md"
       >
         🚀 Start Learning
-      </a>
+      </NavLink>
     </div>
   );
 }
